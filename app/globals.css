@@ -1,0 +1,726 @@
+@import "tailwindcss";
+
+/* ============================================
+   NEO SANS PRO FONT FACE
+   ============================================ */
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url('/assets/fonts/NeoSansProRegular.OTF') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  font-feature-settings: normal;
+}
+
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url('/assets/fonts/NeoSansProItalic.OTF') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url('/assets/fonts/NeoSansProMedium.OTF') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url('/assets/fonts/NeoSansProMedIt.OTF') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url('/assets/fonts/NeoSansProBold.OTF') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url('/assets/fonts/NeoSansProBoldIt.OTF') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url('/assets/fonts/NeoSansProBlack.OTF') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url('/assets/fonts/NeoSansProBlackIt.OTF') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url('/assets/fonts/NeoSansProUltra.OTF') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url('/assets/fonts/NeoSansProUltIt.OTF') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url('/assets/fonts/NeoSansProLightIt.OTF') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ============================================
+   GLOBAL COLOR SYSTEM - LIGHT THEME
+   ============================================ */
+:root {
+  /* Background Colors */
+  --background: #ffffff;
+  --background-secondary: #f9fafb;
+  --background-tertiary: #f3f4f6;
+  
+  /* Foreground Colors */
+  --foreground: #171717;
+  --foreground-secondary: #4b5563;
+  --foreground-tertiary: #6b7280;
+  
+  /* Primary Colors - Blue Black */
+  --primary: #1a1f3a;
+  --primary-dark: #14182e;
+  --primary-darker: #0f1222;
+  --primary-light: #252b4d;
+  --primary-lighter: #303656;
+  
+  /* Secondary Colors - Orange */
+  --secondary: #ff6600;
+  --secondary-dark: #e65c00;
+  --secondary-darker: #cc5200;
+  --secondary-light: #ff7733;
+  --secondary-lighter: #ff8844;
+  
+  /* Accent Colors */
+  --accent: #d97706;
+  --accent-dark: #b45309;
+  --accent-darker: #92400e;
+  --accent-light: #f59e0b;
+  --accent-lighter: #fbbf24;
+  
+  /* Semantic Colors */
+  --success: #10b981;
+  --success-dark: #059669;
+  --success-light: #34d399;
+  
+  --warning: #f59e0b;
+  --warning-dark: #d97706;
+  --warning-light: #fbbf24;
+  
+  --error: #ef4444;
+  --error-dark: #dc2626;
+  --error-light: #f87171;
+  
+  --info: #3b82f6;
+  --info-dark: #2563eb;
+  --info-light: #60a5fa;
+  
+  /* Neutral Colors */
+  --neutral-50: #f9fafb;
+  --neutral-100: #f3f4f6;
+  --neutral-200: #e5e7eb;
+  --neutral-300: #d1d5db;
+  --neutral-400: #9ca3af;
+  --neutral-500: #6b7280;
+  --neutral-600: #4b5563;
+  --neutral-700: #374151;
+  --neutral-800: #1f2937;
+  --neutral-900: #111827;
+  
+  /* Border Colors */
+  --border: #e5e7eb;
+  --border-light: #f3f4f6;
+  --border-dark: #d1d5db;
+  
+  /* Shadow Colors */
+  --shadow-sm: rgba(0, 0, 0, 0.05);
+  --shadow-md: rgba(0, 0, 0, 0.1);
+  --shadow-lg: rgba(0, 0, 0, 0.15);
+  --shadow-xl: rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   GLOBAL COLOR SYSTEM - DARK THEME
+   ============================================ */
+.dark {
+  /* Background Colors */
+  --background: #0f172a;
+  --background-secondary: #1e293b;
+  --background-tertiary: #334155;
+  
+  /* Foreground Colors */
+  --foreground: #f1f5f9;
+  --foreground-secondary: #cbd5e1;
+  --foreground-tertiary: #94a3b8;
+  
+  /* Primary Colors - Adjusted for dark theme (Blue Black) */
+  --primary: #252b4d;
+  --primary-dark: #1a1f3a;
+  --primary-darker: #14182e;
+  --primary-light: #303656;
+  --primary-lighter: #3b4160;
+  
+  /* Secondary Colors - Orange */
+  --secondary: #ff7733;
+  --secondary-dark: #ff6600;
+  --secondary-darker: #e65c00;
+  --secondary-light: #ff8844;
+  --secondary-lighter: #ff9955;
+  
+  /* Accent Colors */
+  --accent: #f59e0b;
+  --accent-dark: #d97706;
+  --accent-darker: #b45309;
+  --accent-light: #fbbf24;
+  --accent-lighter: #fcd34d;
+  
+  /* Semantic Colors */
+  --success: #34d399;
+  --success-dark: #10b981;
+  --success-light: #6ee7b7;
+  
+  --warning: #fbbf24;
+  --warning-dark: #f59e0b;
+  --warning-light: #fcd34d;
+  
+  --error: #f87171;
+  --error-dark: #ef4444;
+  --error-light: #fca5a5;
+  
+  --info: #60a5fa;
+  --info-dark: #3b82f6;
+  --info-light: #93c5fd;
+  
+  /* Neutral Colors - Inverted for dark theme */
+  --neutral-50: #1e293b;
+  --neutral-100: #334155;
+  --neutral-200: #475569;
+  --neutral-300: #64748b;
+  --neutral-400: #94a3b8;
+  --neutral-500: #cbd5e1;
+  --neutral-600: #e2e8f0;
+  --neutral-700: #f1f5f9;
+  --neutral-800: #f8fafc;
+  --neutral-900: #ffffff;
+  
+  /* Border Colors */
+  --border: #334155;
+  --border-light: #1e293b;
+  --border-dark: #475569;
+  
+  /* Shadow Colors */
+  --shadow-sm: rgba(0, 0, 0, 0.3);
+  --shadow-md: rgba(0, 0, 0, 0.4);
+  --shadow-lg: rgba(0, 0, 0, 0.5);
+  --shadow-xl: rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================
+   TAILWIND THEME CONFIGURATION
+   ============================================ */
+@theme inline {
+  /* Color System */
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-tertiary: var(--background-tertiary);
+  --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-tertiary: var(--foreground-tertiary);
+  
+  /* Primary Colors */
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-darker: var(--primary-darker);
+  --color-primary-light: var(--primary-light);
+  --color-primary-lighter: var(--primary-lighter);
+  
+  /* Secondary Colors */
+  --color-secondary: var(--secondary);
+  --color-secondary-dark: var(--secondary-dark);
+  --color-secondary-darker: var(--secondary-darker);
+  --color-secondary-light: var(--secondary-light);
+  --color-secondary-lighter: var(--secondary-lighter);
+  
+  /* Accent Colors */
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-darker: var(--accent-darker);
+  --color-accent-light: var(--accent-light);
+  --color-accent-lighter: var(--accent-lighter);
+  
+  /* Semantic Colors */
+  --color-success: var(--success);
+  --color-success-dark: var(--success-dark);
+  --color-success-light: var(--success-light);
+  --color-warning: var(--warning);
+  --color-warning-dark: var(--warning-dark);
+  --color-warning-light: var(--warning-light);
+  --color-error: var(--error);
+  --color-error-dark: var(--error-dark);
+  --color-error-light: var(--error-light);
+  --color-info: var(--info);
+  --color-info-dark: var(--info-dark);
+  --color-info-light: var(--info-light);
+  
+  /* Neutral Colors */
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+  
+  /* Border Colors */
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+  --color-border-dark: var(--border-dark);
+  
+  /* Font System */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), 'Courier New', Courier, monospace;
+  
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  --font-size-6xl: 3.75rem;   /* 60px */
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+}
+
+/* ============================================
+   BACKGROUND COLOR UTILITIES
+   ============================================ */
+.bg-primary { background-color: var(--primary); }
+.bg-primary-dark { background-color: var(--primary-dark); }
+.bg-primary-darker { background-color: var(--primary-darker); }
+.bg-primary-light { background-color: var(--primary-light); }
+.bg-primary-lighter { background-color: var(--primary-lighter); }
+
+.bg-secondary { background-color: var(--secondary); }
+.bg-secondary-dark { background-color: var(--secondary-dark); }
+.bg-secondary-darker { background-color: var(--secondary-darker); }
+.bg-secondary-light { background-color: var(--secondary-light); }
+.bg-secondary-lighter { background-color: var(--secondary-lighter); }
+
+.bg-accent { background-color: var(--accent); }
+.bg-accent-dark { background-color: var(--accent-dark); }
+.bg-accent-darker { background-color: var(--accent-darker); }
+.bg-accent-light { background-color: var(--accent-light); }
+.bg-accent-lighter { background-color: var(--accent-lighter); }
+
+.bg-success { background-color: var(--success); }
+.bg-success-dark { background-color: var(--success-dark); }
+.bg-success-light { background-color: var(--success-light); }
+
+.bg-warning { background-color: var(--warning); }
+.bg-warning-dark { background-color: var(--warning-dark); }
+.bg-warning-light { background-color: var(--warning-light); }
+
+.bg-error { background-color: var(--error); }
+.bg-error-dark { background-color: var(--error-dark); }
+.bg-error-light { background-color: var(--error-light); }
+
+.bg-info { background-color: var(--info); }
+.bg-info-dark { background-color: var(--info-dark); }
+.bg-info-light { background-color: var(--info-light); }
+
+.bg-background { background-color: var(--background); }
+.bg-background-secondary { background-color: var(--background-secondary); }
+.bg-background-tertiary { background-color: var(--background-tertiary); }
+
+/* Neutral Color Utilities */
+.bg-neutral-50 { background-color: var(--neutral-50); }
+.bg-neutral-100 { background-color: var(--neutral-100); }
+.bg-neutral-200 { background-color: var(--neutral-200); }
+.bg-neutral-300 { background-color: var(--neutral-300); }
+.bg-neutral-400 { background-color: var(--neutral-400); }
+.bg-neutral-500 { background-color: var(--neutral-500); }
+.bg-neutral-600 { background-color: var(--neutral-600); }
+.bg-neutral-700 { background-color: var(--neutral-700); }
+.bg-neutral-800 { background-color: var(--neutral-800); }
+.bg-neutral-900 { background-color: var(--neutral-900); }
+
+.text-neutral-50 { color: var(--neutral-50); }
+.text-neutral-100 { color: var(--neutral-100); }
+.text-neutral-200 { color: var(--neutral-200); }
+.text-neutral-300 { color: var(--neutral-300); }
+.text-neutral-400 { color: var(--neutral-400); }
+.text-neutral-500 { color: var(--neutral-500); }
+.text-neutral-600 { color: var(--neutral-600); }
+.text-neutral-700 { color: var(--neutral-700); }
+.text-neutral-800 { color: var(--neutral-800); }
+.text-neutral-900 { color: var(--neutral-900); }
+
+/* ============================================
+   TEXT COLOR UTILITIES
+   ============================================ */
+.text-primary { color: var(--primary); }
+.text-primary-dark { color: var(--primary-dark); }
+.text-primary-darker { color: var(--primary-darker); }
+.text-primary-light { color: var(--primary-light); }
+.text-primary-lighter { color: var(--primary-lighter); }
+
+.text-secondary { color: var(--secondary); }
+.text-secondary-dark { color: var(--secondary-dark); }
+.text-secondary-darker { color: var(--secondary-darker); }
+.text-secondary-light { color: var(--secondary-light); }
+.text-secondary-lighter { color: var(--secondary-lighter); }
+
+.text-accent { color: var(--accent); }
+.text-accent-dark { color: var(--accent-dark); }
+.text-accent-darker { color: var(--accent-darker); }
+.text-accent-light { color: var(--accent-light); }
+.text-accent-lighter { color: var(--accent-lighter); }
+
+.text-success { color: var(--success); }
+.text-success-dark { color: var(--success-dark); }
+.text-success-light { color: var(--success-light); }
+
+.text-warning { color: var(--warning); }
+.text-warning-dark { color: var(--warning-dark); }
+.text-warning-light { color: var(--warning-light); }
+
+.text-error { color: var(--error); }
+.text-error-dark { color: var(--error-dark); }
+.text-error-light { color: var(--error-light); }
+
+.text-info { color: var(--info); }
+.text-info-dark { color: var(--info-dark); }
+.text-info-light { color: var(--info-light); }
+
+.text-foreground { color: var(--foreground); }
+.text-foreground-secondary { color: var(--foreground-secondary); }
+.text-foreground-tertiary { color: var(--foreground-tertiary); }
+
+/* Text on colored backgrounds */
+.text-on-primary {
+  color: #ffffff;
+}
+
+.dark .text-on-primary {
+  color: #ffffff;
+}
+
+/* Text on secondary backgrounds */
+.text-on-secondary {
+  color: #ffffff;
+}
+
+.dark .text-on-secondary {
+  color: var(--foreground);
+}
+
+/* ============================================
+   BORDER COLOR UTILITIES
+   ============================================ */
+.border-primary { border-color: var(--primary); }
+.border-primary-dark { border-color: var(--primary-dark); }
+.border-primary-light { border-color: var(--primary-light); }
+
+.border-secondary { border-color: var(--secondary); }
+.border-secondary-dark { border-color: var(--secondary-dark); }
+.border-secondary-light { border-color: var(--secondary-light); }
+
+.border-accent { border-color: var(--accent); }
+.border-accent-dark { border-color: var(--accent-dark); }
+.border-accent-light { border-color: var(--accent-light); }
+
+.border-success { border-color: var(--success); }
+.border-warning { border-color: var(--warning); }
+.border-error { border-color: var(--error); }
+.border-info { border-color: var(--info); }
+
+.border-border { border-color: var(--border); }
+.border-border-light { border-color: var(--border-light); }
+.border-border-dark { border-color: var(--border-dark); }
+
+/* ============================================
+   HOVER STATE UTILITIES
+   ============================================ */
+.hover\:bg-primary:hover { background-color: var(--primary); }
+.hover\:bg-primary-dark:hover { background-color: var(--primary-dark); }
+.hover\:bg-primary-light:hover { background-color: var(--primary-light); }
+
+.hover\:bg-secondary:hover { background-color: var(--secondary); }
+.hover\:bg-secondary-dark:hover { background-color: var(--secondary-dark); }
+.hover\:bg-secondary-light:hover { background-color: var(--secondary-light); }
+
+.hover\:bg-accent:hover { background-color: var(--accent); }
+.hover\:bg-accent-dark:hover { background-color: var(--accent-dark); }
+.hover\:bg-accent-light:hover { background-color: var(--accent-light); }
+
+.hover\:text-primary:hover { color: var(--primary); }
+.hover\:text-primary-dark:hover { color: var(--primary-dark); }
+.hover\:text-primary-light:hover { color: var(--primary-light); }
+
+.hover\:text-secondary:hover { color: var(--secondary); }
+.hover\:text-secondary-dark:hover { color: var(--secondary-dark); }
+.hover\:text-secondary-light:hover { color: var(--secondary-light); }
+
+.hover\:text-accent:hover { color: var(--accent); }
+.hover\:text-accent-dark:hover { color: var(--accent-dark); }
+.hover\:text-accent-light:hover { color: var(--accent-light); }
+
+.hover\:border-primary:hover { border-color: var(--primary); }
+.hover\:border-secondary:hover { border-color: var(--secondary); }
+.hover\:border-accent:hover { border-color: var(--accent); }
+
+/* ============================================
+   FOCUS STATE UTILITIES
+   ============================================ */
+.focus\:ring-primary:focus {
+  --tw-ring-color: var(--primary);
+}
+
+.focus\:ring-secondary:focus {
+  --tw-ring-color: var(--secondary);
+}
+
+.focus\:ring-accent:focus {
+  --tw-ring-color: var(--accent);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   ============================================ */
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* ============================================
+   DARK MODE SPECIFIC OVERRIDES
+   ============================================ */
+.dark .bg-white {
+  background-color: var(--background-secondary);
+}
+
+.dark .text-white {
+  color: var(--foreground);
+}
+
+.dark .text-black {
+  color: var(--foreground);
+}
+
+.dark .bg-gray-50 {
+  background-color: var(--neutral-50);
+}
+
+.dark .bg-gray-100 {
+  background-color: var(--neutral-100);
+}
+
+.dark .bg-gray-200 {
+  background-color: var(--neutral-200);
+}
+
+.dark .text-gray-800 {
+  color: var(--neutral-800);
+}
+
+.dark .text-gray-700 {
+  color: var(--neutral-700);
+}
+
+.dark .text-gray-600 {
+  color: var(--neutral-600);
+}
+
+.dark .text-gray-500 {
+  color: var(--neutral-500);
+}
+
+.dark .border-gray-200 {
+  border-color: var(--border);
+}
+
+.dark .border-gray-300 {
+  border-color: var(--border-dark);
+}
+
+.dark .shadow-md {
+  box-shadow: 0 4px 6px -1px var(--shadow-md), 0 2px 4px -1px var(--shadow-sm);
+}
+
+.dark .shadow-lg {
+  box-shadow: 0 10px 15px -3px var(--shadow-lg), 0 4px 6px -2px var(--shadow-md);
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS
+   ============================================ */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+/* Exclude certain elements from transitions */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  transition: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+.overflow-x-auto {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ============================================
+   HERO SECTION ANIMATIONS
+   ============================================ */
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+.duration-1500 {
+  transition-duration: 1500ms;
+}
