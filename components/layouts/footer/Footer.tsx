@@ -51,23 +51,23 @@ const Footer = ({ setup, products }: FooterProps) => {
   ) as [keyof SocialMedia, string][];
 
   return (
-    <footer className="bg-primary text-on-primary">
+    <footer className="bg-black text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16">
             {/* Company Info */}
             <motion.div
-              className="lg:col-span-1"
+              className="lg:col-span-1 flex flex-col items-center justify-center min-h-[200px]"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
               data-aos="fade-up"
             >
-              <Link href="/" className="group flex items-center space-x-3 mb-6">
+              <Link href="/" className="group flex items-center justify-center">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-accent-lighter/20 rounded-full blur-lg group-hover:bg-accent-lighter/30 transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+                  <div className="absolute inset-0 bg-white/20 rounded-full blur-lg group-hover:bg-white/30 transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
                   <Image
                     src={
                       setup?.logo_small
@@ -77,54 +77,12 @@ const Footer = ({ setup, products }: FooterProps) => {
                         : "/assets/images/IMG-20260117-WA0012.jpg"
                     }
                     alt="Mekonnen Amdisa import and export"
-                    width={60}
-                    height={60}
-                    className="rounded-full object-cover ring-2 ring-accent-lighter/30 group-hover:ring-accent-lighter/50 transition-all duration-300 relative z-10"
+                    width={160}
+                    height={160}
+                    className="rounded-full object-cover ring-6 ring-white/40 group-hover:ring-white/60 transition-all duration-300 relative z-10"
                   />
                 </div>
-
               </Link>
-              <p className="text-sm leading-relaxed mb-6 text-on-primary/80">
-                Mekonnen Amdisa is an Import & Export company based in Ethiopia. We have exported 550 shipments to 100 buyers worldwide. Our primary markets include India, Pakistan, Turkey, Europe, South America, and the Middle East.
-              </p>
-
-              {/* Social Media Links */}
-              <div className="flex flex-wrap gap-3">
-                {availableLinks.map(([name, url]) => {
-                  const colors = getSocialMediaColor(name);
-                  const isGradient = name === "instagram";
-                  
-                  return (
-                    <a
-                      key={name}
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={name}
-                      className="group relative p-2.5 rounded-lg
-                        border border-white/20
-                        hover:border-opacity-100 transition-all duration-300
-                        hover:scale-110 hover:-translate-y-1"
-                      style={{
-                        background: colors.bg,
-                        color: colors.text,
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.background = colors.hoverBg;
-                        e.currentTarget.style.color = isGradient ? "#ffffff" : "#ffffff";
-                        e.currentTarget.style.borderColor = colors.hoverBg;
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.background = colors.bg;
-                        e.currentTarget.style.color = colors.text;
-                        e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.2)";
-                      }}
-                    >
-                      {socialIconConfig[name]}
-                    </a>
-                  );
-                })}
-              </div>
             </motion.div>
 
             {/* Quick Links */}
@@ -136,9 +94,9 @@ const Footer = ({ setup, products }: FooterProps) => {
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <h4 className="text-on-primary font-bold text-lg mb-6 relative inline-block">
+              <h4 className="text-white font-bold text-lg mb-6 relative inline-block">
                 Quick Links
-                <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-accent-lighter"></span>
+                <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-white/60"></span>
               </h4>
               <ul className="space-y-3">
                 {[
@@ -152,9 +110,9 @@ const Footer = ({ setup, products }: FooterProps) => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="group flex items-center text-sm text-on-primary/80 hover:text-accent-lighter transition-all duration-300"
+                      className="group flex items-center text-sm text-white/80 hover:text-white transition-all duration-300"
                     >
-                      <span className="w-0 h-0.5 bg-accent-lighter group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                      <span className="w-0 h-0.5 bg-white/60 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
                       <span className="group-hover:translate-x-1 transition-transform duration-300">
                         {link.name}
                       </span>
@@ -173,18 +131,18 @@ const Footer = ({ setup, products }: FooterProps) => {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <h4 className="text-on-primary font-bold text-lg mb-6 relative inline-block">
+              <h4 className="text-white font-bold text-lg mb-6 relative inline-block">
                 Our Products
-                <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-accent-lighter"></span>
+                <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-white/60"></span>
               </h4>
               <ul className="space-y-3">
                 {products.slice(0, 6).map((product) => (
                   <li key={product.id}>
                     <Link
                       href={`/products/${product.slug}`}
-                      className="group flex items-center w-full text-left text-sm text-on-primary/80 hover:text-accent-lighter transition-all duration-300"
+                      className="group flex items-center w-full text-left text-sm text-white/80 hover:text-white transition-all duration-300"
                     >
-                      <span className="w-0 h-0.5 bg-accent-lighter group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                      <span className="w-0 h-0.5 bg-white/60 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
                       <span className="group-hover:translate-x-1 transition-transform duration-300">
                         {product.name}
                       </span>
@@ -203,17 +161,17 @@ const Footer = ({ setup, products }: FooterProps) => {
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <h4 className="text-on-primary font-bold text-lg mb-6 relative inline-block">
+              <h4 className="text-white font-bold text-lg mb-6 relative inline-block">
                 Contact Us
-                <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-accent-lighter"></span>
+                <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-white/60"></span>
               </h4>
 
               {/* Contact Info */}
               <div className="space-y-4">
                 <div className="flex items-start space-x-3 group">
-                  <div className="mt-1 p-1.5 rounded-lg bg-accent-lighter/20 group-hover:bg-accent-lighter/30 transition-colors">
+                  <div className="mt-1 p-1.5 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
                     <svg
-                      className="w-4 h-4 text-accent-lighter"
+                      className="w-4 h-4 text-white/80"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -233,10 +191,10 @@ const Footer = ({ setup, products }: FooterProps) => {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-on-primary">
+                    <p className="text-sm font-medium text-white">
                       Location
                     </p>
-                    <p className="text-sm text-on-primary/80">
+                    <p className="text-sm text-white/80">
                       {setup?.company_address || "Addis Ababa, Ethiopia"}
                     </p>
                   </div>
@@ -244,9 +202,9 @@ const Footer = ({ setup, products }: FooterProps) => {
 
                 {setup?.phone_numbers && setup.phone_numbers.length > 0 && (
                   <div className="flex items-start space-x-3 group">
-                    <div className="mt-1 p-1.5 rounded-lg bg-accent-lighter/20 group-hover:bg-accent-lighter/30 transition-colors">
+                    <div className="mt-1 p-1.5 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
                       <svg
-                        className="w-4 h-4 text-accent-lighter"
+                        className="w-4 h-4 text-white/80"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -260,12 +218,12 @@ const Footer = ({ setup, products }: FooterProps) => {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-on-primary">
+                      <p className="text-sm font-medium text-white">
                         Phone
                       </p>
                       <a
                         href={`tel:${setup.phone_numbers[0].value}`}
-                        className="text-sm text-on-primary/80 hover:text-accent-lighter transition-colors"
+                        className="text-sm text-white/80 hover:text-white transition-colors"
                       >
                         {setup.phone_numbers[0].value}
                       </a>
@@ -275,9 +233,9 @@ const Footer = ({ setup, products }: FooterProps) => {
 
                 {setup?.email_addresses && setup.email_addresses.length > 0 && (
                   <div className="flex items-start space-x-3 group">
-                    <div className="mt-1 p-1.5 rounded-lg bg-accent-lighter/20 group-hover:bg-accent-lighter/30 transition-colors">
+                    <div className="mt-1 p-1.5 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
                       <svg
-                        className="w-4 h-4 text-accent-lighter"
+                        className="w-4 h-4 text-white/80"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -291,12 +249,12 @@ const Footer = ({ setup, products }: FooterProps) => {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-on-primary">
+                      <p className="text-sm font-medium text-white">
                         Email
                       </p>
                       <a
                         href={`mailto:${setup.email_addresses[0].value}`}
-                        className="text-sm text-on-primary/80 hover:text-accent-lighter transition-colors"
+                        className="text-sm text-white/80 hover:text-white transition-colors"
                       >
                         {setup.email_addresses[0].value}
                       </a>
@@ -305,9 +263,9 @@ const Footer = ({ setup, products }: FooterProps) => {
                 )}
 
                 <div className="flex items-start space-x-3 group">
-                  <div className="mt-1 p-1.5 rounded-lg bg-accent-lighter/20 group-hover:bg-accent-lighter/30 transition-colors">
+                  <div className="mt-1 p-1.5 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
                     <svg
-                      className="w-4 h-4 text-accent-lighter"
+                      className="w-4 h-4 text-white/80"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -321,20 +279,61 @@ const Footer = ({ setup, products }: FooterProps) => {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-on-primary">
+                    <p className="text-sm font-medium text-white">
                       Working Hours
                     </p>
-                    <p className="text-sm text-on-primary/80">{setup?.working_hour || "24/7 Available"}</p>
+                    <p className="text-sm text-white/80">{setup?.working_hour || "24/7 Available"}</p>
                   </div>
                 </div>
               </div>
             </motion.div>
           </div>
+
+          {/* Full Width Social Media Section */}
+          <div className="w-full flex items-center justify-center py-8">
+            <div className="flex-1 h-px bg-white/30"></div>
+            <div className="flex items-center gap-6 px-8">
+              {availableLinks.map(([name, url]) => {
+                const colors = getSocialMediaColor(name);
+                const isGradient = name === "instagram";
+
+                return (
+                  <a
+                    key={name}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={name}
+                    className="group relative w-8 h-8 rounded-full border border-white/30
+                      hover:border-white transition-all duration-300
+                      hover:scale-110 hover:-translate-y-1 flex items-center justify-center"
+                    style={{
+                      background: colors.bg,
+                      color: colors.text,
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = colors.hoverBg;
+                      e.currentTarget.style.color = isGradient ? "#ffffff" : "#ffffff";
+                      e.currentTarget.style.borderColor = colors.hoverBg;
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = colors.bg;
+                      e.currentTarget.style.color = colors.text;
+                      e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.3)";
+                    }}
+                  >
+                    {socialIconConfig[name]}
+                  </a>
+                );
+              })}
+            </div>
+            <div className="flex-1 h-px bg-white/30"></div>
+          </div>
         </div>
 
         {/* Bottom Bar */}
         <motion.div
-          className="border-t border-white/10 pt-8 pb-8"
+          className="border-t border-white/20 pt-8 pb-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -342,20 +341,20 @@ const Footer = ({ setup, products }: FooterProps) => {
           data-aos="fade-up"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-on-primary/80 text-center md:text-left">
+            <p className="text-sm text-white/80 text-center md:text-left">
               &copy; {new Date().getFullYear()}{" "}
-              <span className="text-on-primary font-semibold">
+              <span className="text-white font-semibold">
                 Mekonnen Amdisa Import & Export
               </span>
               {" "}. All rights reserved.
             </p>
-            <p className="text-sm text-on-primary/80">
+            <p className="text-sm text-white/80">
               Designed by{" "}
               <Link
                 href="https://keradiontechnology.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent-lighter hover:text-accent transition-colors font-semibold"
+                className="text-white/90 hover:text-white transition-colors font-semibold"
               >
                 Keradion Technology
               </Link>
