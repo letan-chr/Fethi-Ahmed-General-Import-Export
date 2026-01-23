@@ -38,7 +38,7 @@ const Breadcrump = ({ title, subtitle, backgroundImage }: BreadcrumpProps) => {
   };
 
   // Default background image if not provided
-  const defaultBgImage = backgroundImage || '/assets/images/IMG-20260117-WA0018.jpg';
+  const defaultBgImage = backgroundImage || '/assets/images/photo_2026-01-20_10-55-54.jpg';
   
   // Auto-generate title from pathname if not provided
   const autoTitle = title || getBreadcrumbName(paths[paths.length - 1] || 'Home');

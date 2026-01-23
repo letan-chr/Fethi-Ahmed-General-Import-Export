@@ -11,7 +11,7 @@ const Cta = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/assets/images/warehouse-goods-cartons-factory-storage-shipping-merchandise-room-logistics-background_892776-36406.jpg"
+          src="/assets/images/photo_2024-08-13-17.19.52-1280x854.jpeg"
           alt="Call to Action Background"
           fill
           className="object-cover"

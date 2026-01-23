@@ -123,7 +123,7 @@ const About = ({ aboutContent }: AboutProps) => {
                 src={
                   aboutContent?.about_image
                     ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${aboutContent?.about_image}`
-                    : "/assets/images/IMG-20260117-WA0017.jpg"
+                    : "/assets/images/photo_2026-01-20_10-55-53.jpg"
                 }
                 alt="About Our Company"
                 width={600}

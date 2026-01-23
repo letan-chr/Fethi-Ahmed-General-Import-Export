@@ -46,7 +46,7 @@ function SisterCompanyDetails({
     ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${company.banner}`
     : company.images && company.images.length > 0
     ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${typeof company.images[0] === 'string' ? company.images[0] : (company.images[0] as any).image || (company.images[0] as any).image_path}`
-    : "/assets/images/IMG-20260117-WA0018.jpg";
+    : "/assets/images/photo_2026-01-20_10-55-54.jpg";
 
   return (
     <div className="min-h-screen bg-background">

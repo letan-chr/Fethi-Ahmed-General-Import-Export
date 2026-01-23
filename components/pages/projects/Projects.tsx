@@ -8,7 +8,7 @@ const Projects = () => {
       id: 'specialty-coffee',
       title: 'Ethiopian Specialty Coffee',
       description: 'We export carefully selected, high-grade coffee beans sourced from Ethiopia's most celebrated coffee-growing regions',
-      image: '/assets/images/IMG-20260117-WA0017.jpg',
+      image: '/assets/images/photo_2026-01-20_10-55-53.jpg',
       features: [
         'Fresh, authentic beans',
         'Ethical sourcing',
@@ -20,7 +20,7 @@ const Projects = () => {
       id: 'millstone-grind-mills',
       title: 'Millstone & Grind Mills',
       description: 'Strong, durable grinding solutions for farming and industry',
-      image: '/assets/images/IMG-20260117-WA0022.jpg',
+      image: '/assets/images/photo_2026-01-20_10-55-53 (3).jpg',
       features: [
         'Durable construction',
         'Farming applications',
@@ -32,7 +32,7 @@ const Projects = () => {
       id: 'generators',
       title: 'Generators',
       description: 'Reliable power generation units for continuous operation',
-      image: '/assets/images/warehouse-goods-cartons-factory-storage-shipping-merchandise-room-logistics-background_892776-36406.jpg',
+      image: '/assets/images/photo_2024-08-13-17.19.52-1280x854.jpeg',
       features: [
         'Continuous operation',
         'Reliable power generation',
@@ -44,7 +44,7 @@ const Projects = () => {
       id: 'medical-equipment',
       title: 'Medical Equipment',
       description: 'Modern diagnostic devices, tools & consumables for healthcare providers',
-      image: '/assets/images/IMG-20260117-WA0019.jpg',
+      image: '/assets/images/photo_2026-01-20_10-55-53 (2).jpg',
       features: [
         'Modern diagnostic devices',
         'Medical tools',
@@ -56,7 +56,7 @@ const Projects = () => {
       id: 'water-pumps',
       title: 'Water Pumps',
       description: 'Hand pumps and electrical water pumps for rural access, farming, and irrigation',
-      image: '/assets/images/IMG-20260117-WA0018.jpg',
+      image: '/assets/images/photo_2026-01-20_10-55-54.jpg',
       features: [
         'Hand pumps for rural access',
         'Electrical water pumps',

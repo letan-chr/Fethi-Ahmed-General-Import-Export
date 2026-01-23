@@ -7,19 +7,19 @@ const Testimonials = () => {
       name: 'Construction Manager',
       role: 'Government Project',
       content: 'Fethi Ahmed General Import & Export provides exceptional quality Ethiopian specialty coffee. Their attention to detail and commitment to quality is unmatched. Authentic beans and reliable delivery.',
-      image: '/assets/images/IMG-20260117-WA0019.jpg',
+      image: '/assets/images/photo_2026-01-20_10-55-53 (2).jpg',
     },
     {
       name: 'Project Director',
       role: 'NGO Organization',
       content: 'We have been working with Fethi Ahmed General Import & Export for years. Their specialty coffee exports are of exceptional quality and their industrial equipment imports have been reliable for our operations.',
-      image: '/assets/images/IMG-20260117-WA0022.jpg',
+      image: '/assets/images/photo_2026-01-20_10-55-53 (3).jpg',
     },
     {
       name: 'Business Owner',
       role: 'Private Company',
       content: 'Fethi Ahmed General Import & Export has been our trusted partner for Ethiopian specialty coffee. Premium quality beans with excellent customer service. Highly recommended!',
-      image: '/assets/images/warehouse-goods-cartons-factory-storage-shipping-merchandise-room-logistics-background_892776-36406.jpg',
+      image: '/assets/images/photo_2024-08-13-17.19.52-1280x854.jpeg',
     },
   ];
 
