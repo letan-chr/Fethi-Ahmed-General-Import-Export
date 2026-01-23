@@ -65,10 +65,10 @@ function Services() {
                     href={`/service/${service.slug}`}
                     className="group block lg:pl-24"
                   >
-                    <div className="bg-background-secondary/50 backdrop-blur-sm rounded-3xl overflow-hidden border-2 border-primary hover:border-primary-dark transition-all duration-500 hover:shadow-2xl">
+                    <div className="bg-background-secondary/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-primary hover:border-primary-dark transition-all duration-500 hover:shadow-2xl">
                       {/* Content Section */}
-                      <div className="p-8 md:p-12 lg:p-16">
-                        <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
+                      <div className="p-3 md:p-4 lg:p-6">
+                        <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-4">
                           {/* Text Content */}
                           <div className="flex-1 space-y-6">
                             <div className="flex items-center gap-4">
@@ -80,17 +80,19 @@ function Services() {
                               <div className="h-px flex-1 bg-border/50"></div>
                             </div>
 
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground group-hover:text-secondary transition-colors duration-300">
                               {service.title}
                             </h2>
 
-                            <p className="text-lg md:text-xl text-foreground-secondary leading-relaxed">
+                            <p className="text-lg md:text-xl text-foreground-secondary group-hover:text-secondary leading-relaxed transition-colors duration-300">
                               {service.short_description}
                             </p>
 
-                            <div className="flex items-center gap-3 text-primary font-semibold pt-4">
-                              <span className="group-hover:underline">Learn More</span>
-                              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                            <div className="flex items-center gap-3 pt-4">
+                              <span className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg">
+                                Learn More
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                              </span>
                             </div>
                           </div>
 
