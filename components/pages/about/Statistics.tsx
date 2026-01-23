@@ -50,7 +50,7 @@ const StatisticsAchievements = ({ stats, awards }: StatisticsAchievementsProps) 
   }
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-foreground via-foreground/95 to-foreground relative overflow-hidden">
+    <section className="py-8 md:py-10 lg:py-12 bg-gradient-to-br from-foreground via-foreground/95 to-foreground relative overflow-hidden">
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Content Section - Left */}

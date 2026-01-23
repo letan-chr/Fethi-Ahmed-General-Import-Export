@@ -12,7 +12,7 @@ interface AboutSectionProps {
 
 const AboutSection = ({ aboutContent }: AboutSectionProps) => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 lg:py-12 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -22,41 +22,6 @@ const AboutSection = ({ aboutContent }: AboutSectionProps) => {
       </div>
 
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Hero Section */}
-        <motion.div
-          className="text-center mb-12 md:mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Fethi Ahmed General Import & Export
-          </motion.h1>
-          <motion.p
-            className="text-xl md:text-2xl text-primary font-semibold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Connecting Ethiopia's Finest Coffee with the World & Supplying Quality Industrial Solutions
-          </motion.p>
-          <motion.div
-            className="w-24 h-1 bg-gradient-to-r from-primary to-primary-dark mx-auto rounded-full"
-            initial={{ width: 0 }}
-            whileInView={{ width: 96 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          />
-        </motion.div>
-
         {/* About Us Section - Image Left, Content Right */}
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-16">
           {/* Image Section - Left */}

@@ -284,6 +284,7 @@ export interface SisterCompany {
   id: number;
   business_id: number;
   name: string;
+  slug?: string;
   short_description: string | null;
   description: string | null;
   details: string | null;

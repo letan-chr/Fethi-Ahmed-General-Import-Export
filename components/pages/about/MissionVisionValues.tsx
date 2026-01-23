@@ -49,7 +49,7 @@ const MissionVisionValues = ({ aboutContent }: MissionVisionValuesProps) => {
       }));
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-foreground via-foreground/95 to-foreground relative overflow-hidden">
+    <section className="py-8 md:py-10 lg:py-12 bg-gradient-to-br from-foreground via-foreground/95 to-foreground relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

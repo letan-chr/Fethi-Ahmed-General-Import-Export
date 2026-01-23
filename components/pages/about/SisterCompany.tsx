@@ -18,6 +18,17 @@ const SisterCompany = ({ sisterCompanies }: SisterCompanyProps) => {
     return null;
   }
 
+  // Helper function to generate slug from name
+  const generateSlug = (name: string): string => {
+    return name
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, '') // Remove special characters
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+      .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+  };
+
   const truncateText = (text: string | null, maxLength: number = 120) => {
     if (!text) return "";
     // Remove HTML tags for truncation
@@ -27,7 +38,7 @@ const SisterCompany = ({ sisterCompanies }: SisterCompanyProps) => {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 lg:py-12 bg-background relative overflow-hidden">
       {/* Modern Decorative Background Elements */}
       <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]">
         <div
@@ -188,7 +199,7 @@ const SisterCompany = ({ sisterCompanies }: SisterCompanyProps) => {
 
                       {/* View Details Button */}
                       <Link
-                        href={`/sister-company/${company.id}`}
+                        href={`/sister-company/${company.slug || generateSlug(company.name)}`}
                         className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 group/button"
                       >
                         <span>View Details</span>

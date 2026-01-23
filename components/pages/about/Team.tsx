@@ -41,7 +41,7 @@ const Team = ({ teams }: TeamProps) => {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-foreground via-foreground/95 to-foreground relative overflow-hidden">
+    <section className="py-8 md:py-10 lg:py-12 bg-gradient-to-br from-foreground via-foreground/95 to-foreground relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-5 dark:opacity-10">
         <div
