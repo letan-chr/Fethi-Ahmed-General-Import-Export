@@ -59,24 +59,27 @@ const Header = ({ setup, services }: HeaderProps) => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="relative z-10"
+              className="relative z-20"
+              style={{ filter: 'none', backdropFilter: 'none' }}
             >
               <Link href="/" className="flex items-center">
-                <div className="relative bg-white/10 backdrop-blur-md p-1 rounded-xl border border-white/20 h-[62px] lg:h-[78px] flex items-center justify-center">
-                  <Image
-                    src={
-                      setup?.logo_small
-                        ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${setup.logo_small}`
-                        : setup?.logo_large
-                        ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${setup.logo_large}`
-                        : "/assets/images/IMG-20260117-WA0012.jpg"
-                    }
-                    alt="Debab Trading"
-                    width={60}
-                    height={60}
-                    className="h-[60px] lg:h-[76px] w-auto object-contain"
-                  />
-                </div>
+                <Image
+                  src={
+                    setup?.logo_small
+                      ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${setup.logo_small}`
+                      : setup?.logo_large
+                      ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${setup.logo_large}`
+                      : "/assets/images/IMG-20260117-WA0012.jpg"
+                  }
+                  alt="Debab Trading"
+                  width={60}
+                  height={60}
+                  className="h-[60px] lg:h-[76px] w-auto object-contain"
+                  priority
+                  quality={100}
+                  unoptimized={false}
+                  style={{ filter: 'none' }}
+                />
               </Link>
             </motion.div>
 

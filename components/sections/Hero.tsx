@@ -113,9 +113,9 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
         </svg>
       </div>
 
-      {/* Content Section - Left Aligned (30% area) */}
+      {/* Content Section - Left Aligned (60% area) */}
       <div className="relative z-20 h-full flex items-center px-6 sm:px-8 lg:px-12 xl:px-16">
-        <div className="w-full max-w-[30%] text-left">
+        <div className="w-full min-w-[60%] max-w-[60%] text-left">
           {/* Main Content */}
           <div className="space-y-6">
             {/* Title */}
