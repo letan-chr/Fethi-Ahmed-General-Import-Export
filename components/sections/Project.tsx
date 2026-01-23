@@ -33,7 +33,7 @@ const Project = ({ products }: ProductProps) => {
   }, [featuredProducts.length]);
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-background via-gray-50/30 to-background relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-gradient-to-b from-background via-gray-50/30 to-background relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-secondary/5 rounded-full blur-3xl"></div>
@@ -43,7 +43,7 @@ const Project = ({ products }: ProductProps) => {
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-9xl relative z-10">
         {/* Header Section */}
         <motion.div
-          className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-12 md:mb-16"
+          className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-8 md:mb-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -52,7 +52,7 @@ const Project = ({ products }: ProductProps) => {
           {/* Left Side - Title Section */}
           <div className="flex-1">
             <motion.div
-              className="inline-flex items-center gap-2 mb-4"
+              className="inline-flex items-center gap-2 mb-2"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -64,12 +64,12 @@ const Project = ({ products }: ProductProps) => {
               </span>
             </motion.div>
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 text-left">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 text-left">
               Our <span className="bg-gradient-to-r from-secondary to-secondary-dark bg-clip-text text-transparent">Products</span>
             </h2>
             
             <motion.div
-              className="w-24 h-1 bg-gradient-to-r from-secondary to-secondary-dark mb-6"
+              className="w-24 h-1 bg-gradient-to-r from-secondary to-secondary-dark mb-4"
               initial={{ width: 0 }}
               whileInView={{ width: 96 }}
               viewport={{ once: true }}
@@ -105,11 +105,11 @@ const Project = ({ products }: ProductProps) => {
 
         {/* Featured Products - New Layout: col-5 (left) with 2 products, col-7 (right) with sliding carousel */}
         {featuredProducts.length > 0 && (
-          <div className="mb-12 md:mb-16">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
+          <div className="mb-8 md:mb-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6">
               {/* Left Column - col-5: Two Featured Products Stacked */}
               <motion.div
-                className="lg:col-span-5 flex flex-col gap-4 md:gap-6"
+                className="lg:col-span-5 flex flex-col gap-3 md:gap-4"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
@@ -128,28 +128,30 @@ const Project = ({ products }: ProductProps) => {
                   >
                     <Link
                       href={`/products/${product.slug}`}
-                      className={`group relative block h-full min-h-[200px] md:min-h-[240px] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 ${
+                      className={`group relative flex h-full min-h-[140px] md:min-h-[160px] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 bg-background ${
                         currentSlide === index
                           ? "border-secondary shadow-xl shadow-secondary/20"
                           : "border-gray-200/50 hover:border-secondary/50"
                       }`}
                     >
-                      <div className="absolute inset-0">
+                      {/* Image - Left 30% */}
+                      <div className="relative w-[30%] flex-shrink-0 overflow-hidden">
                         <Image
                           src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${product.banner_image}`}
                           alt={product.name}
                           fill
                           className="object-cover group-hover:scale-110 transition-transform duration-500"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/30 group-hover:from-black/90 transition-all duration-300"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
                       </div>
 
-                      <div className="absolute inset-0 flex items-center justify-between p-4 md:p-6">
+                      {/* Content - Right 70% */}
+                      <div className="flex-1 flex items-center justify-between p-3 md:p-4">
                         <div className="flex-1">
-                          <h3 className="text-lg md:text-xl font-bold text-white mb-1 group-hover:text-secondary transition-colors line-clamp-1">
+                          <h3 className="text-base md:text-lg font-bold text-foreground mb-1 group-hover:text-secondary transition-colors line-clamp-1">
                             {product.name}
                           </h3>
-                          <p className="text-gray-300 text-xs md:text-sm line-clamp-2">
+                          <p className="text-foreground-secondary text-xs md:text-sm line-clamp-2">
                             {product.description}
                           </p>
                         </div>
@@ -188,7 +190,7 @@ const Project = ({ products }: ProductProps) => {
                         >
                           <Link
                             href={`/products/${product.slug}`}
-                            className="group relative block h-full min-h-[452px] md:min-h-[498px] rounded-2xl overflow-hidden shadow-2xl"
+                            className="group relative block h-full min-h-[296px] md:min-h-[344px] rounded-2xl overflow-hidden shadow-2xl"
                           >
                             {/* Image with Overlay */}
                             <div className="absolute inset-0">
@@ -203,12 +205,12 @@ const Project = ({ products }: ProductProps) => {
                             </div>
 
                             {/* Content Overlay */}
-                            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
-                              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 group-hover:text-secondary transition-colors duration-300">
+                            <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 group-hover:text-secondary transition-colors duration-300">
                                 {product.name}
                               </h3>
                               
-                              <p className="text-gray-200 text-lg md:text-xl mb-6 line-clamp-3 max-w-2xl">
+                              <p className="text-gray-200 text-lg md:text-xl mb-4 line-clamp-3 max-w-2xl">
                                 {product.description}
                               </p>
 
@@ -229,7 +231,7 @@ const Project = ({ products }: ProductProps) => {
 
                 {/* Slide Indicators */}
                 {featuredProducts.length > 1 && (
-                  <div className="flex items-center justify-center gap-2 mt-4">
+                  <div className="flex items-center justify-center gap-2 mt-2">
                     {featuredProducts.map((_, index) => (
                       <button
                         key={index}
@@ -252,7 +254,7 @@ const Project = ({ products }: ProductProps) => {
         {/* Regular Products - Modern Grid with Hover Effects */}
         {regularProducts.length > 0 && (
           <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
               {regularProducts.map((product, index) => (
                 <motion.div
                   key={index}
@@ -280,11 +282,11 @@ const Project = ({ products }: ProductProps) => {
                     </div>
 
                     {/* Content Overlay */}
-                    <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-6">
+                    <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-5">
                       <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors line-clamp-1">
                         {product.name}
                       </h3>
-                      <p className="text-white/90 text-sm leading-relaxed line-clamp-2 mb-4">
+                      <p className="text-white/90 text-sm leading-relaxed line-clamp-2 mb-3">
                         {product.description}
                       </p>
                       
