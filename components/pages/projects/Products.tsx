@@ -129,7 +129,7 @@ const Products = () => {
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       placeholder="Search products..."
-                      className="w-full px-4 py-3 pl-11 bg-background border-2 border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all text-foreground placeholder-foreground-tertiary"
+                      className="w-full px-4 py-3 pl-11 bg-background border-2 border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition-all text-foreground placeholder-foreground-tertiary"
                     />
                     <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-foreground-tertiary" />
                   </div>
@@ -156,16 +156,16 @@ const Products = () => {
                     className={`w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
                       selectedCategory === "All"
                         ? "bg-gradient-to-r from-primary to-primary-dark text-on-primary shadow-lg transform scale-105"
-                        : "bg-background-secondary text-foreground hover:bg-primary/10 hover:text-primary hover:translate-x-1 border border-border/50"
+                        : "bg-background-secondary text-foreground hover:bg-secondary/10 hover:text-secondary hover:translate-x-1 border border-border/50"
                     }`}
                   >
                     <span className="flex items-center justify-between">
                       <span>All Products</span>
-                      <span className={`px-2 py-1 rounded-lg text-xs font-bold ${
-                        selectedCategory === "All"
-                          ? "bg-on-primary/20 text-on-primary"
-                          : "bg-primary/10 text-primary"
-                      }`}>
+                          <span className={`px-2 py-1 rounded-lg text-xs font-bold ${
+                            selectedCategory === "All"
+                              ? "bg-on-primary/20 text-on-primary"
+                              : "bg-secondary/10 text-secondary"
+                          }`}>
                         {products.length}
                       </span>
                     </span>
@@ -182,7 +182,7 @@ const Products = () => {
                         className={`w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
                           isSelected
                             ? "bg-gradient-to-r from-primary to-primary-dark text-on-primary shadow-lg transform scale-105"
-                            : "bg-background-secondary text-foreground hover:bg-primary/10 hover:text-primary hover:translate-x-1 border border-border/50"
+                            : "bg-background-secondary text-foreground hover:bg-secondary/10 hover:text-secondary hover:translate-x-1 border border-border/50"
                         }`}
                       >
                         <span className="flex items-center justify-between">
@@ -190,7 +190,7 @@ const Products = () => {
                           <span className={`px-2 py-1 rounded-lg text-xs font-bold ${
                             isSelected
                               ? "bg-on-primary/20 text-on-primary"
-                              : "bg-primary/10 text-primary"
+                              : "bg-secondary/10 text-secondary"
                           }`}>
                             {count}
                           </span>
@@ -247,8 +247,8 @@ const Products = () => {
                         }}
                         className={`group w-full bg-gradient-to-br from-background to-background-secondary rounded-xl shadow-md hover:shadow-lg border-2 overflow-hidden transition-all duration-300 text-left flex-shrink-0 ${
                           index === selectedFeaturedIndex
-                            ? "border-primary shadow-xl scale-105"
-                            : "border-border hover:border-primary/50"
+                            ? "border-secondary shadow-xl scale-105"
+                            : "border-border hover:border-secondary/50"
                         }`}
                       >
                         <div className="flex gap-4 p-4">
@@ -266,15 +266,15 @@ const Products = () => {
                             />
                             {/* Active Indicator */}
                             {index === selectedFeaturedIndex && (
-                              <div className="absolute inset-0 bg-primary/20"></div>
+                              <div className="absolute inset-0 bg-secondary/20"></div>
                             )}
                           </div>
                           {/* Content */}
                           <div className="flex-1 min-w-0 flex flex-col justify-center">
                             <h3 className={`text-sm font-bold mb-1 line-clamp-2 transition-colors ${
                               index === selectedFeaturedIndex
-                                ? "text-primary"
-                                : "text-foreground group-hover:text-primary"
+                                ? "text-secondary"
+                                : "text-foreground group-hover:text-secondary"
                             }`}>
                               {product.name}
                             </h3>
@@ -288,10 +288,10 @@ const Products = () => {
                               ? "translate-x-0"
                               : "translate-x-2 group-hover:translate-x-0"
                           }`}>
-                            <ArrowRight className={`w-4 h-4 ${
+                            <ArrowRight className={`w-4 h-4 transition-colors ${
                               index === selectedFeaturedIndex
-                                ? "text-primary"
-                                : "text-foreground-tertiary"
+                                ? "text-secondary"
+                                : "text-foreground-tertiary group-hover:text-secondary"
                             }`} />
                           </div>
                         </div>
@@ -312,7 +312,7 @@ const Products = () => {
                   >
                     <Link
                       href={`/products/${featuredProducts[selectedFeaturedIndex]?.slug}`}
-                      className="group bg-gradient-to-br from-background to-background-secondary rounded-2xl shadow-lg hover:shadow-2xl border-2 border-border hover:border-primary/50 overflow-hidden transition-all duration-500 w-full h-full flex flex-col"
+                      className="group bg-gradient-to-br from-background to-background-secondary rounded-2xl shadow-lg hover:shadow-2xl border-2 border-border hover:border-secondary/50 overflow-hidden transition-all duration-500 w-full h-full flex flex-col"
                     >
                       <div className="relative flex-1 overflow-hidden bg-background-secondary">
                         {featuredProducts.map((product, index) => (
@@ -367,8 +367,8 @@ const Products = () => {
                           }}
                           className={`w-2 h-2 rounded-full transition-all duration-300 ${
                             index === selectedFeaturedIndex
-                              ? "bg-primary w-8"
-                              : "bg-white/50 hover:bg-white/75"
+                              ? "bg-secondary w-8"
+                              : "bg-white/50 hover:bg-secondary/75"
                           }`}
                           aria-label={`Go to featured product ${index + 1}`}
                         />
@@ -383,20 +383,6 @@ const Products = () => {
             {/* All Products Section */}
             {regularProducts.length > 0 && (
               <div className="space-y-6">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center">
-                      <ShoppingBag className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                        All Products
-                      </h2>
-                      <p className="text-sm text-foreground-secondary">{regularProducts.length} products available</p>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Products Grid - 4 columns with equal heights */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
                   {regularProducts.map((product, index) => (
@@ -410,7 +396,7 @@ const Products = () => {
                     >
                       <Link
                         href={`/products/${product.slug}`}
-                        className="group flex flex-col bg-gradient-to-br from-background to-background-secondary rounded-xl shadow-md hover:shadow-xl border border-border hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-1 relative w-full"
+                        className="group flex flex-col bg-gradient-to-br from-background to-background-secondary rounded-xl shadow-md hover:shadow-xl border border-border hover:border-secondary/30 overflow-hidden transition-all duration-300 hover:-translate-y-1 relative w-full"
                       >
                         {/* Product Image - Fixed Height */}
                         <div className="relative h-44 overflow-hidden bg-background-secondary flex-shrink-0">
@@ -426,15 +412,15 @@ const Products = () => {
 
                         {/* Product Info - Flex grow to fill space */}
                         <div className="p-4 flex flex-col flex-grow">
-                          <h3 className="text-base font-bold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors duration-300">
+                          <h3 className="text-base font-bold text-foreground mb-2 line-clamp-2 group-hover:text-secondary transition-colors duration-300">
                             {product.name}
                           </h3>
                           <p className="text-xs text-foreground-secondary mb-4 line-clamp-2 leading-relaxed flex-grow">
                             {product.description}
                           </p>
                           <div className="flex items-center justify-end pt-3 border-t border-border/30 mt-auto">
-                            <div className="w-9 h-9 rounded-full bg-primary/10 group-hover:bg-primary transition-all duration-300 flex items-center justify-center group-hover:scale-110">
-                              <ArrowRight className="w-4 h-4 text-primary group-hover:text-on-primary group-hover:translate-x-0.5 transition-all" />
+                            <div className="w-9 h-9 rounded-full bg-secondary/10 group-hover:bg-secondary transition-all duration-300 flex items-center justify-center group-hover:scale-110">
+                              <ArrowRight className="w-4 h-4 text-secondary group-hover:text-white group-hover:translate-x-0.5 transition-all" />
                             </div>
                           </div>
                         </div>
