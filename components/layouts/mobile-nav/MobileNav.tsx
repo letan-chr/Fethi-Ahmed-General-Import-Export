@@ -113,7 +113,7 @@ const MobileNav = ({ navItems, isOpen, onClose }: MobileNavProps) => {
                 <Link
                   href="/conntacts"
                   onClick={onClose}
-                  className="block w-full bg-accent hover:bg-accent-light text-white px-6 py-3.5 rounded-lg font-semibold transition-all duration-300 text-center transform hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/30"
+                  className="block w-full bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white px-6 py-3.5 rounded-lg font-semibold transition-all duration-300 text-center transform hover:scale-[1.02] hover:shadow-lg"
                 >
                   Get Quote
                 </Link>

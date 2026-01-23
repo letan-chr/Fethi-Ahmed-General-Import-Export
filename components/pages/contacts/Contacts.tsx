@@ -366,7 +366,7 @@ const Contacts = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full group relative bg-gradient-to-r from-primary via-primary to-accent hover:from-primary-dark hover:via-primary-dark hover:to-accent-dark text-on-primary px-8 py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-2xl disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer overflow-hidden"
+                    className="w-full group relative bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white px-8 py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-2xl disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer overflow-hidden"
                   >
                     <span className="relative z-10 flex items-center justify-center gap-3">
                       {loading ? (
@@ -384,7 +384,6 @@ const Contacts = () => {
                         </>
                       )}
                     </span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
                 </form>
               </div>

@@ -14,7 +14,7 @@ interface ServiceProps {
 const Service = ({ services }: ServiceProps) => {
   return (
     <section 
-      className="relative py-8 md:py-10 overflow-hidden bg-gradient-to-br from-secondary/25 via-secondary/20 to-secondary/25"
+      className="relative py-8 md:py-8 overflow-hidden bg-gradient-to-br from-secondary/25 via-secondary/20 to-secondary/25"
     >
       {/* Decorative gradient orbs */}
       <div 

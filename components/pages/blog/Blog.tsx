@@ -191,7 +191,7 @@ const Blog = () => {
                             </p>
                             
                             {/* Read More Button */}
-                            <div className="inline-flex items-center gap-3 bg-primary hover:bg-primary-dark text-on-primary font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg">
+                            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg">
                               <span>Read Full Article</span>
                               <svg
                                 className="w-5 h-5"
@@ -367,7 +367,7 @@ const Blog = () => {
                             </p>
                             
                             {/* Read More Button */}
-                            <div className="inline-flex items-center gap-3 bg-primary hover:bg-primary-dark text-on-primary font-semibold px-6 py-3 rounded-full transition-all duration-300 group-hover:scale-105 shadow-lg">
+                            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 group-hover:scale-105 shadow-lg">
                               <span>Read Full Article</span>
                               <svg
                                 className="w-5 h-5 group-hover:translate-x-1 transition-transform"
@@ -459,7 +459,7 @@ const Blog = () => {
                     </div>
                     <button
                       type="submit"
-                      className="w-full bg-primary hover:bg-primary-dark text-on-primary font-semibold py-3 rounded-lg transition-colors"
+                      className="w-full bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white font-semibold py-3 rounded-lg transition-all duration-300"
                     >
                       Search
                     </button>

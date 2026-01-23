@@ -157,8 +157,8 @@ const Project = ({ products }: ProductProps) => {
                           className="ml-4 flex-shrink-0"
                           whileHover={{ x: 5 }}
                         >
-                          <div className="bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full p-2 border border-white/20 group-hover:border-white/40 transition-all duration-300">
-                            <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:text-secondary transition-colors" />
+                          <div className="bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light rounded-full p-2 shadow-lg transition-all duration-300">
+                            <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-white transition-colors" />
                           </div>
                         </motion.div>
                       </div>
@@ -214,7 +214,7 @@ const Project = ({ products }: ProductProps) => {
 
                               {/* CTA */}
                               <motion.div
-                                className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 border border-white/20 group-hover:border-white/40 w-fit"
+                                className="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg w-fit"
                                 whileHover={{ x: 5 }}
                               >
                                 <span>Discover More</span>
@@ -290,7 +290,7 @@ const Project = ({ products }: ProductProps) => {
                       
                       {/* CTA Button */}
                       <motion.div
-                        className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 border border-white/20 group-hover:border-white/40 w-fit"
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg w-fit"
                         whileHover={{ x: 5 }}
                       >
                         <span>View Details</span>

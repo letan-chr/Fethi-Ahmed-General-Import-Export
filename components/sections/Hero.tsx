@@ -158,7 +158,7 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/products"
-                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:bg-gray-100 shadow-lg"
+                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 shadow-lg"
                 >
                   <span className="relative z-10">Explore Products</span>
                   <motion.svg
@@ -182,7 +182,7 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/conntacts"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-transparent backdrop-blur-sm border-2 border-white text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white/10 hover:border-white/80"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white font-semibold rounded-lg transition-all duration-300 shadow-lg"
                 >
                   <span>Contact Us</span>
                   <svg

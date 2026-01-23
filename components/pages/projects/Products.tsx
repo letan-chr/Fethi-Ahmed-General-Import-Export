@@ -344,7 +344,7 @@ const Products = () => {
                                 <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-6 line-clamp-3">
                                   {product.description}
                                 </p>
-                                <div className="inline-flex items-center gap-3 bg-primary hover:bg-primary-dark text-on-primary font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg">
+                                <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg">
                                   <span>View Product Details</span>
                                   <ArrowRight className="w-5 h-5" />
                                 </div>

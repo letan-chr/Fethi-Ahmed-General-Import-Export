@@ -88,7 +88,7 @@ const Blog = ({ blogs }: BlogProps) => {
 
             {/* CTA Button */}
             <motion.div
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 border border-white/20 group-hover:border-white/40 w-fit"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg w-fit"
               whileHover={{ x: 5 }}
             >
               <span>Read Full Story</span>
@@ -236,7 +236,7 @@ const Blog = ({ blogs }: BlogProps) => {
           <div className="flex-shrink-0">
             <Link
               href="/blogs"
-              className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-colors duration-300 group"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white font-semibold rounded-lg transition-all duration-300 group"
             >
               View All Blogs
               <svg

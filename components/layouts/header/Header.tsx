@@ -151,14 +151,13 @@ const Header = ({ setup, services }: HeaderProps) => {
                         ? `tel:${setup.phone_numbers[0].value}`
                         : "/conntacts"
                     }
-                    className="group relative px-5 py-2.5 inline-flex items-center gap-2 rounded-lg transition-all duration-300 overflow-hidden"
+                    className="group relative px-5 py-2.5 inline-flex items-center gap-2 rounded-lg transition-all duration-300 overflow-hidden bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light"
                   >
                     {/* Animated background effect */}
                     <motion.div
-                      className="absolute inset-0 bg-primary rounded-lg"
+                      className="absolute inset-0 rounded-lg"
                       initial={false}
                       whileHover={{
-                        backgroundColor: "rgb(var(--primary))",
                         scale: 1.02,
                       }}
                       transition={{ duration: 0.3 }}
@@ -216,11 +215,11 @@ const Header = ({ setup, services }: HeaderProps) => {
                       ? `tel:${setup.phone_numbers[0].value}`
                       : "/conntacts"
                   }
-                  className="relative px-4 py-2.5 inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/5 backdrop-blur-sm"
+                  className="relative px-4 py-2.5 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white backdrop-blur-sm transition-all duration-300"
                 >
                   {/* Pulsing dot */}
                   <motion.div
-                    className="w-2 h-2 rounded-full bg-primary"
+                    className="w-2 h-2 rounded-full bg-white"
                     animate={{
                       scale: [1, 1.3, 1],
                       opacity: [0.7, 1, 0.7],
@@ -231,7 +230,7 @@ const Header = ({ setup, services }: HeaderProps) => {
                       ease: "easeInOut",
                     }}
                   />
-                  <span className="text-sm font-medium text-primary">Call</span>
+                  <span className="text-sm font-medium text-white">Call</span>
                 </Link>
               </motion.div>
 

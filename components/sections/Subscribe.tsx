@@ -18,7 +18,7 @@ const Subscribe = () => {
             />
             <button
               type="submit"
-              className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap"
+              className="bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 whitespace-nowrap"
             >
               Subscribe
             </button>
