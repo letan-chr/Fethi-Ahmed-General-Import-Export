@@ -33,7 +33,7 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
   const currentContent = heroSlides[currentSlide];
 
   return (
-    <section className="relative h-screen overflow-hidden -mt-24 bg-black">
+    <section className="relative h-[70vh] overflow-hidden bg-black">
       {/* Full Background Image */}
       <AnimatePresence initial={false} mode="sync">
         {heroSlides.map(
@@ -57,127 +57,150 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
                     quality={90}
                   />
                 )}
-                {/* Dark overlay for better contrast */}
-                <div className="absolute inset-0 bg-black/20"></div>
               </motion.div>
             )
         )}
       </AnimatePresence>
 
-      {/* Content Section with Backdrop */}
-      <div className="relative z-10 h-full flex items-center px-6 sm:px-8 lg:px-12 xl:px-16 pt-20">
-        <div className="w-full max-w-3xl">
-          {/* Slide Number Indicator - Without separator line */}
-          <motion.div
-            className="mb-8"
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="inline-flex items-center gap-3 px-4 py-2 bg-black/20 backdrop-blur-md rounded-full border border-white/20">
-              <span className="text-accent font-bold text-sm tracking-wider">
-                {(currentSlide + 1).toString().padStart(2, "0")}
-              </span>
-              <span className="text-gray-400 text-sm">/</span>
-              <span className="text-gray-400 text-sm">
-                {heroSlides.length.toString().padStart(2, "0")}
-              </span>
-            </div>
-          </motion.div>
+      {/* Curved Green Gradient Overlay - Left 30% with more bend, Right 70% with less bend */}
+      <div className="absolute inset-0 z-10 pointer-events-none">
+        <svg
+          className="absolute inset-0 w-full h-full"
+          viewBox="0 0 1000 700"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="greenGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="rgba(124, 252, 0, 0.9)" stopOpacity="0.9" />
+              <stop offset="30%" stopColor="rgba(50, 205, 50, 0.85)" stopOpacity="0.85" />
+              <stop offset="60%" stopColor="rgba(32, 178, 170, 0.7)" stopOpacity="0.7" />
+              <stop offset="100%" stopColor="rgba(64, 224, 208, 0.5)" stopOpacity="0.5" />
+            </linearGradient>
+          </defs>
+          {/* Curved path: more pronounced curve on left (30%), gentler curve on right (70%) */}
+          <path
+            d="M 0,0 
+               L 0,700 
+               C 150,690 200,680 250,670 
+               C 280,665 300,660 350,640 
+               C 400,620 450,590 500,550 
+               C 550,510 600,470 650,430 
+               C 700,390 750,360 800,340 
+               C 850,320 900,300 950,280 
+               C 970,275 990,270 1000,260 
+               L 1000,0 
+               Z"
+            fill="url(#greenGradient)"
+          />
+        </svg>
+        {/* White curved accent line at bottom edge */}
+        <svg
+          className="absolute bottom-0 left-0 w-full h-1"
+          viewBox="0 0 1000 10"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M 0,10 
+               C 200,8 280,6 300,5 
+               C 400,3 500,2 600,1.5 
+               C 700,1 800,0.5 900,0.3 
+               C 950,0.2 980,0.1 1000,0 
+               L 1000,10 
+               L 0,10 
+               Z"
+            fill="rgba(255, 255, 255, 0.3)"
+          />
+        </svg>
+      </div>
 
-          {/* Main Content with Backdrop */}
-          <div className="relative p-8 sm:p-10 lg:p-12 bg-black/20 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl">
-            <div className="space-y-8">
-              {/* Title */}
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentSlide}
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 50 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] text-white mb-6">
-                    <span className="block">{currentContent?.title}</span>
-                  </h1>
-                </motion.div>
-              </AnimatePresence>
-
-              {/* Description */}
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={`desc-${currentSlide}`}
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 50 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                >
-                  <p className="text-lg sm:text-xl text-gray-200 leading-relaxed max-w-2xl">
-                    {currentContent?.description}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
-
-              {/* CTA Buttons */}
+      {/* Content Section - Left Aligned (30% area) */}
+      <div className="relative z-20 h-full flex items-center px-6 sm:px-8 lg:px-12 xl:px-16">
+        <div className="w-full max-w-[30%] text-left">
+          {/* Main Content */}
+          <div className="space-y-6">
+            {/* Title */}
+            <AnimatePresence mode="wait">
               <motion.div
-                className="flex flex-wrap gap-4 pt-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                key={currentSlide}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 30 }}
+                transition={{ duration: 0.5 }}
               >
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Link
-                    href="/products"
-                    className="group relative inline-flex items-center gap-3 px-8 py-4 bg-accent text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:bg-accent-light shadow-lg shadow-accent/30"
-                  >
-                    <span className="relative z-10">Explore Products</span>
-                    <motion.svg
-                      className="w-5 h-5 relative z-10"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      initial={{ x: 0 }}
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </motion.svg>
-                    <motion.div
-                      className="absolute inset-0 bg-white/20"
-                      initial={{ x: "-100%" }}
-                      whileHover={{ x: 0 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                  </Link>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Link
-                    href="/conntacts"
-                    className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-semibold rounded-lg transition-all duration-300 hover:border-white hover:bg-white/20"
-                  >
-                    <span>Contact Us</span>
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-                      />
-                    </svg>
-                  </Link>
-                </motion.div>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white mb-4">
+                  <span className="block">{currentContent?.title}</span>
+                </h1>
               </motion.div>
-            </div>
+            </AnimatePresence>
+
+            {/* Description */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`desc-${currentSlide}`}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 30 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <p className="text-base sm:text-lg lg:text-xl text-white/95 leading-relaxed">
+                  {currentContent?.description}
+                </p>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* CTA Buttons */}
+            <motion.div
+              className="flex flex-wrap gap-4 pt-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href="/products"
+                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:bg-gray-100 shadow-lg"
+                >
+                  <span className="relative z-10">Explore Products</span>
+                  <motion.svg
+                    className="w-5 h-5 relative z-10"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    initial={{ x: 0 }}
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </motion.svg>
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href="/conntacts"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-transparent backdrop-blur-sm border-2 border-white text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white/10 hover:border-white/80"
+                >
+                  <span>Contact Us</span>
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+                    />
+                  </svg>
+                </Link>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>
