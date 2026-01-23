@@ -41,7 +41,7 @@ const Cta = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
+      <div className="relative z-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-9xl w-full">
         <div className="max-w-2xl">
           {/* Main Heading */}
           <motion.h2

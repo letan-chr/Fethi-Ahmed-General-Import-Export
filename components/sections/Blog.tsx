@@ -209,7 +209,7 @@ const Blog = ({ blogs }: BlogProps) => {
 
   return (
     <section className="py-20 bg-background">
-      <div className="mx-auto px-4 max-w-7xl">
+      <div className="mx-auto px-4 max-w-9xl">
         {/* Header Section - Left aligned title/description with button on right */}
         <motion.div
           className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 gap-6"

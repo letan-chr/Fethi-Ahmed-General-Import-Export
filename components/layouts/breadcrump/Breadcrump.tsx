@@ -111,7 +111,7 @@ const Breadcrump = ({ title, subtitle, backgroundImage }: BreadcrumpProps) => {
 
       {/* Content Section - Left Aligned (60% area) */}
       <div className="relative z-20 h-full flex items-center px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="w-full max-w-7xl mx-auto">
+        <div className="w-full max-w-9xl mx-auto">
           <div className="w-full min-w-[60%] max-w-[60%] text-left space-y-5">
             {/* Breadcrumb Navigation - Modern & Interactive */}
             <motion.nav 

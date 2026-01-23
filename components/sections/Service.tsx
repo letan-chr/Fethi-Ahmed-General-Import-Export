@@ -24,7 +24,7 @@ const Service = ({ services }: ServiceProps) => {
         className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full blur-3xl -z-10 bg-secondary/15"
       ></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
+      <div className="relative z-10 max-w-9xl mx-auto px-4">
         <motion.div
           className="text-center mb-4 md:mb-6"
           initial={{ opacity: 0, y: 30 }}

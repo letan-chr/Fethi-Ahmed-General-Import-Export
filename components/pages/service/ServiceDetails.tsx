@@ -57,7 +57,7 @@ function ServiceDetails({ service, relatedServices }: ServiceDetailsProps) {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="mx-auto px-4 py-12 max-w-7xl">
+      <div className="mx-auto px-4 py-12 max-w-9xl">
         {/* Back Button */}
         <button
           onClick={() => navigate.back()}

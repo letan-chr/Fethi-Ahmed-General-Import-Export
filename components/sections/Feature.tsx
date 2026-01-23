@@ -39,7 +39,7 @@ const Feature = () => {
 
   return (
     <section className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-slate-100 via-purple-50/30 to-slate-100 dark:from-slate-900 dark:via-purple-900/20 dark:to-slate-900">
-      <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-9xl">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Text Content */}
           <motion.div

@@ -40,7 +40,7 @@ const Project = ({ products }: ProductProps) => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-9xl relative z-10">
         {/* Header Section */}
         <motion.div
           className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-12 md:mb-16"

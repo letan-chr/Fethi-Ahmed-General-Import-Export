@@ -55,7 +55,7 @@ const SisterCompany = ({ sisterCompanies }: SisterCompanyProps) => {
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
 
-      <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-9xl">
         {/* Header Section */}
         <motion.div
           className="text-center mb-12 md:mb-16"

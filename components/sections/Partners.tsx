@@ -61,7 +61,7 @@ const Partners = ({ partners }: PartnerProps) => {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/20 to-transparent"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Modern Professional Header Section */}
         <motion.div
           className="text-center mb-6 md:mb-8"
