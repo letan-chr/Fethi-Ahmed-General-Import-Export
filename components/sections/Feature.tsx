@@ -49,7 +49,7 @@ const Feature = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            {/* "WHAT WE DO" Heading */}
+            {/* "WHY CHOOSE US" Heading */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ const Feature = () => {
               transition={{ duration: 0.5 }}
             >
               <h3 className="text-xs md:text-sm font-semibold text-primary uppercase tracking-wider mb-3">
-                WHAT WE DO
+                WHY CHOOSE US
               </h3>
             </motion.div>
 
@@ -69,11 +69,11 @@ const Feature = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 leading-tight">
-                Sourcing Only the Highest Quality Products
+                What Sets Us Apart
               </h2>
             </motion.div>
 
-            {/* Short Description */}
+            {/* Main Description */}
             <motion.div
               className="space-y-3"
               initial={{ opacity: 0, y: 20 }}
@@ -82,11 +82,11 @@ const Feature = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <p className="text-sm md:text-base text-foreground-secondary leading-relaxed">
-                Founded in 2006, we specialize in exporting premium specialty coffee and importing industrial and medical equipment, serving as a reliable bridge between Ethiopia and international markets.
+                With over 18 years of experience since 2006, we have established ourselves as a trusted partner in international trade. We provide only premium products with ethical sourcing, transparent operations, and tailored solutions that match your priorities.
               </p>
             </motion.div>
 
-            {/* Why Choose Us Section */}
+            {/* Key Benefits Section */}
             <motion.div
               className="pt-4"
               initial={{ opacity: 0, y: 20 }}
@@ -94,11 +94,8 @@ const Feature = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <h4 className="text-sm md:text-base font-semibold text-foreground mb-2">
-                Why Choose Us
-              </h4>
               <p className="text-xs md:text-sm text-foreground-secondary leading-relaxed">
-                We provide only premium products with ethical sourcing, transparent operations, and tailored solutions that match your priorities. Our commitment to quality and sustainability ensures reliable partnerships.
+                Our commitment to quality, sustainability, and customer satisfaction ensures reliable partnerships and exceptional results. We serve as a reliable bridge between Ethiopia and international markets, delivering excellence in every transaction.
               </p>
             </motion.div>
           </motion.div>
