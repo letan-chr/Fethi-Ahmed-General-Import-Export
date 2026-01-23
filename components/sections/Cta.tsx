@@ -17,13 +17,11 @@ const Cta = () => {
           className="object-cover"
           priority
         />
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
-        {/* Gradient Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+        {/* Gradient Overlay - Tertiary (left) to Primary (right) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-tertiary/70 via-tertiary/50 to-primary/70"></div>
       </div>
 
-      {/* Circular Overlay Graphic - Right Side */}
+      {/* Circular Overlay Graphic - Right Side with Brand Colors */}
       <div className="absolute inset-0 overflow-hidden z-10 pointer-events-none">
         <motion.div
           className="absolute top-1/2 -translate-y-1/2 right-0 w-[600px] h-[600px] md:w-[800px] md:h-[800px] lg:w-[1000px] lg:h-[1000px]"
@@ -32,13 +30,13 @@ const Cta = () => {
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          {/* Concentric Rings */}
-          <div className="absolute inset-0 rounded-full border-[120px] border-[#8B4513]/40 blur-sm"></div>
-          <div className="absolute inset-[120px] rounded-full border-[100px] border-[#A0522D]/50 blur-sm"></div>
-          <div className="absolute inset-[220px] rounded-full border-[80px] border-[#CD853F]/40 blur-sm"></div>
-          <div className="absolute inset-[300px] rounded-full border-[60px] border-[#DEB887]/30 blur-sm"></div>
-          <div className="absolute inset-[360px] rounded-full border-[40px] border-[#F5DEB3]/20 blur-sm"></div>
-          <div className="absolute inset-[400px] rounded-full bg-gradient-to-br from-[#D2691E]/20 via-[#CD853F]/15 to-[#F5DEB3]/10 blur-md"></div>
+          {/* Concentric Rings - Using Tertiary Color */}
+          <div className="absolute inset-0 rounded-full border-[120px] border-tertiary/40 blur-sm"></div>
+          <div className="absolute inset-[120px] rounded-full border-[100px] border-tertiary-light/50 blur-sm"></div>
+          <div className="absolute inset-[220px] rounded-full border-[80px] border-tertiary/40 blur-sm"></div>
+          <div className="absolute inset-[300px] rounded-full border-[60px] border-tertiary-light/30 blur-sm"></div>
+          <div className="absolute inset-[360px] rounded-full border-[40px] border-tertiary/20 blur-sm"></div>
+          <div className="absolute inset-[400px] rounded-full bg-gradient-to-br from-tertiary/20 via-tertiary-light/15 to-tertiary/10 blur-md"></div>
         </motion.div>
       </div>
 
@@ -132,8 +130,9 @@ const Cta = () => {
         </div>
       </div>
 
-      {/* Subtle decorative elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+      {/* Subtle decorative elements - Brand Colors */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
     </section>
   );
 };
