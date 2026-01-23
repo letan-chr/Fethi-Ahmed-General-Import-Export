@@ -119,6 +119,14 @@ export async function getBlogBySlug(slug: string): Promise<BlogResponse> {
   return response.data;
 }
 
+//sister company by id
+export async function getSisterCompanyById(id: string | number) {
+  const response = await axiosInstance.get<ApiResponse<any>>(
+    `/sisters-company/${id}`
+  );
+  return response.data;
+}
+
 // ---------- BLOGS ----------
 export async function getBlogCategories(): Promise<BlogCategoryResponse> {
   const response = await axiosInstance.get<BlogCategoryResponse>(

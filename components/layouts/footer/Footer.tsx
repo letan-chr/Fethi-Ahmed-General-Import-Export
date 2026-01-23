@@ -76,7 +76,7 @@ const Footer = ({ setup, products }: FooterProps) => {
                         ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${setup.logo_large}`
                         : "/assets/images/IMG-20260117-WA0012.jpg"
                     }
-                    alt="Fethi Ahmed General Import & Export"
+                    alt="Mekonnen Amdisa import and export"
                     width={160}
                     height={160}
                     className="rounded-full object-cover ring-6 ring-white/40 group-hover:ring-white/60 transition-all duration-300 relative z-10"
@@ -344,7 +344,7 @@ const Footer = ({ setup, products }: FooterProps) => {
             <p className="text-sm text-white/80 text-center md:text-left">
               &copy; {new Date().getFullYear()}{" "}
               <span className="text-white font-semibold">
-                Fethi Ahmed General Import & Export
+                Mekonnen Amdisa Import & Export
               </span>
               {" "}. All rights reserved.
             </p>

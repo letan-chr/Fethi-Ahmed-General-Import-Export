@@ -59,27 +59,24 @@ const Header = ({ setup, services }: HeaderProps) => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="relative z-20"
-              style={{ filter: 'none', backdropFilter: 'none' }}
+              className="relative z-10"
             >
               <Link href="/" className="flex items-center">
-                <Image
-                  src={
-                    setup?.logo_small
-                      ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${setup.logo_small}`
-                      : setup?.logo_large
-                      ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${setup.logo_large}`
-                      : "/assets/images/IMG-20260117-WA0012.jpg"
-                  }
-                  alt="Fethi Ahmed General Import & Export"
-                  width={60}
-                  height={60}
-                  className="h-[60px] lg:h-[76px] w-auto object-contain"
-                  priority
-                  quality={100}
-                  unoptimized={false}
-                  style={{ filter: 'none' }}
-                />
+                <div className="relative p-1 h-[62px] lg:h-[78px] flex items-center justify-center">
+                  <Image
+                    src={
+                      setup?.logo_small
+                        ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${setup.logo_small}`
+                        : setup?.logo_large
+                        ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${setup.logo_large}`
+                        : "/assets/images/IMG-20260117-WA0012.jpg"
+                    }
+                    alt="Fethi Ahmed General Import & Export"
+                    width={160}
+                    height={160}
+                    className=" transition-all duration-300 relative z-10"
+                  />
+                </div>
               </Link>
             </motion.div>
 
@@ -158,9 +155,10 @@ const Header = ({ setup, services }: HeaderProps) => {
                   >
                     {/* Animated background effect */}
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-primary to-tertiary rounded-lg"
+                      className="absolute inset-0 bg-primary rounded-lg"
                       initial={false}
                       whileHover={{
+                        backgroundColor: "rgb(var(--primary))",
                         scale: 1.02,
                       }}
                       transition={{ duration: 0.3 }}

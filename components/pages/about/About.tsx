@@ -7,6 +7,8 @@ import BusinessStructure from "./BusinessStructure";
 import StatisticsAchievements from "./Statistics";
 import Team from "./Team";
 import Testimonials from "./Testimonials";
+import SisterCompany from "./SisterCompany";
+import Achievement from "./Achievement";
 import { getBatchData } from "@/api/Service";
 import {
   AboutAward,
@@ -15,6 +17,7 @@ import {
   Stat,
   TeamMember,
   Testimonial,
+  SisterCompany as SisterCompanyType,
 } from "@/types/types";
 
 const About = () => {
@@ -23,6 +26,7 @@ const About = () => {
   const [teams, setTeams] = useState<TeamMember[]>([]);
   const [awards, setAwards] = useState<AboutAward[]>([]);
   const [stats, setStats] = useState<Stat[]>([]);
+  const [sisterCompanies, setSisterCompanies] = useState<SisterCompanyType[]>([]);
 
   useEffect(() => {
     const features: Feature[] = [
@@ -31,6 +35,7 @@ const About = () => {
       { name: "about_team", amount: 10 },
       { name: "about_award", amount: 10 },
       { name: "about_statistic", amount: 10 },
+      { name: "about_sisters_company", amount: 10 },
     ];
 
     async function fetchData() {
@@ -42,6 +47,7 @@ const About = () => {
         setTeams(data.about_team?.data ?? []);
         setAwards(data.about_award?.data ?? []);
         setStats(data.about_statistic?.data ?? []);
+        setSisterCompanies(data.about_sisters_company?.data ?? []);
       } catch (err) {
         console.error(err);
       }
@@ -75,6 +81,16 @@ const About = () => {
       {(stats && stats.length > 0) || (awards && awards.length > 0) ? (
         <StatisticsAchievements stats={stats} awards={awards} />
       ) : null}
+
+      {/* 7. Sister Companies - White Background */}
+      {sisterCompanies && sisterCompanies.length > 0 && (
+        <SisterCompany sisterCompanies={sisterCompanies} />
+      )}
+
+      {/* 8. Achievements - Black Background */}
+      {awards && awards.length > 0 && (
+        <Achievement awards={awards} />
+      )}
     </>
   );
 };

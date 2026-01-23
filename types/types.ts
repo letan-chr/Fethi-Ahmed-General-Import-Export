@@ -268,6 +268,40 @@ export interface AboutAward {
   updated_at: string;
 }
 
+export interface SisterCompanyService {
+  title: string;
+  description: string;
+}
+
+export interface SisterCompanySocialMedia {
+  facebook: string | null;
+  twitter: string | null;
+  linkedin: string | null;
+  instagram: string | null;
+}
+
+export interface SisterCompany {
+  id: number;
+  business_id: number;
+  name: string;
+  short_description: string | null;
+  description: string | null;
+  details: string | null;
+  banner: string;
+  email: string | null;
+  phone: string | null;
+  website_link: string | null;
+  social_media_link: SisterCompanySocialMedia;
+  service: SisterCompanyService[];
+  images: any[];
+  is_active: boolean;
+  order: number;
+  views_count: number;
+  created_at: string;
+  updated_at: string;
+  old_image: string | null;
+}
+
 export interface BatchResponse {
   blog_post?: { data: Blog[] };
 
@@ -286,6 +320,8 @@ export interface BatchResponse {
   about_statistic?: { data: Stat[] };
 
   about_award?: { data: AboutAward[] };
+
+  about_sisters_company?: { data: SisterCompany[] };
 
   about_advertisement?: { data: any[] };
 
