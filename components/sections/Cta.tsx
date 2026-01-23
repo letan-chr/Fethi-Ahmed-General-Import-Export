@@ -83,7 +83,7 @@ const Cta = () => {
             >
               <Link
                 href="/contacts"
-                className="group relative inline-flex items-center justify-center w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-primary hover:bg-primary-light text-white font-bold text-base md:text-lg rounded-xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/50 font-sans"
+                className="group relative inline-flex items-center justify-center w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white font-bold text-base md:text-lg rounded-xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl font-sans"
               >
                 <span className="relative z-10 flex items-center gap-3">
                   Get Free Quote
@@ -94,7 +94,7 @@ const Cta = () => {
                   />
                 </span>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary"
+                  className="absolute inset-0 bg-gradient-to-r from-tertiary-light to-primary-light"
                   initial={{ x: '-100%' }}
                   whileHover={{ x: 0 }}
                   transition={{ duration: 0.3 }}
@@ -110,7 +110,7 @@ const Cta = () => {
             >
               <Link
                 href="/about"
-                className="group relative inline-flex items-center justify-center w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-primary hover:bg-primary-light text-white font-bold text-base md:text-lg rounded-xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/50 font-sans"
+                className="group relative inline-flex items-center justify-center w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white font-bold text-base md:text-lg rounded-xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl font-sans"
               >
                 <span className="relative z-10 flex items-center gap-3">
                   Learn More
@@ -121,7 +121,7 @@ const Cta = () => {
                   />
                 </span>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary"
+                  className="absolute inset-0 bg-gradient-to-r from-tertiary-light to-primary-light"
                   initial={{ x: '-100%' }}
                   whileHover={{ x: 0 }}
                   transition={{ duration: 0.3 }}

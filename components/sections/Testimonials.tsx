@@ -6,19 +6,19 @@ const Testimonials = () => {
     {
       name: 'Construction Manager',
       role: 'Government Project',
-      content: 'Debab Trading provides exceptional quality building materials. Their attention to detail and commitment to quality is unmatched. Competitive prices and reliable delivery.',
+      content: 'Fethi Ahmed General Import & Export provides exceptional quality Ethiopian specialty coffee. Their attention to detail and commitment to quality is unmatched. Authentic beans and reliable delivery.',
       image: '/assets/images/IMG-20260117-WA0019.jpg',
     },
     {
       name: 'Project Director',
       role: 'NGO Organization',
-      content: 'We have been working with Debab Trading for years. Their building materials are of high quality and their flexible payment options (cash or credit) help us manage our projects better.',
+      content: 'We have been working with Fethi Ahmed General Import & Export for years. Their specialty coffee exports are of exceptional quality and their industrial equipment imports have been reliable for our operations.',
       image: '/assets/images/IMG-20260117-WA0022.jpg',
     },
     {
       name: 'Business Owner',
       role: 'Private Company',
-      content: 'Debab Trading has been our trusted supplier for construction materials. Quality products at competitive prices with excellent customer service. Highly recommended!',
+      content: 'Fethi Ahmed General Import & Export has been our trusted partner for Ethiopian specialty coffee. Premium quality beans with excellent customer service. Highly recommended!',
       image: '/assets/images/warehouse-goods-cartons-factory-storage-shipping-merchandise-room-logistics-background_892776-36406.jpg',
     },
   ];

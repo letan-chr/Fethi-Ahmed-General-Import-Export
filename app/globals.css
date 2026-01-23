@@ -106,19 +106,29 @@
   --foreground-secondary: #4b5563;
   --foreground-tertiary: #6b7280;
   
-  /* Primary Colors - Blue Black */
-  --primary: #1a1f3a;
-  --primary-dark: #14182e;
-  --primary-darker: #0f1222;
-  --primary-light: #252b4d;
-  --primary-lighter: #303656;
+  /* Primary Colors - Green Yellow */
+  --primary: #abcf3a;
+  --primary-rgb: 171, 207, 58;
+  --primary-dark: #96b832;
+  --primary-darker: #7fa02a;
+  --primary-light: #b8d84a;
+  --primary-lighter: #c5e15a;
   
-  /* Secondary Colors - Orange */
-  --secondary: #ff6600;
-  --secondary-dark: #e65c00;
-  --secondary-darker: #cc5200;
-  --secondary-light: #ff7733;
-  --secondary-lighter: #ff8844;
+  /* Secondary Colors - Blue */
+  --secondary: #0872a6;
+  --secondary-rgb: 8, 114, 166;
+  --secondary-dark: #07618a;
+  --secondary-darker: #06506e;
+  --secondary-light: #0a83b8;
+  --secondary-lighter: #0c94ca;
+  
+  /* Tertiary Colors - Green */
+  --tertiary: #0d9348;
+  --tertiary-rgb: 13, 147, 72;
+  --tertiary-dark: #0b7a3c;
+  --tertiary-darker: #096130;
+  --tertiary-light: #0fac54;
+  --tertiary-lighter: #11c560;
   
   /* Accent Colors */
   --accent: #d97706;
@@ -182,19 +192,26 @@
   --foreground-secondary: #cbd5e1;
   --foreground-tertiary: #94a3b8;
   
-  /* Primary Colors - Adjusted for dark theme (Blue Black) */
-  --primary: #252b4d;
-  --primary-dark: #1a1f3a;
-  --primary-darker: #14182e;
-  --primary-light: #303656;
-  --primary-lighter: #3b4160;
+  /* Primary Colors - Adjusted for dark theme (Green Yellow) */
+  --primary: #b8d84a;
+  --primary-dark: #abcf3a;
+  --primary-darker: #96b832;
+  --primary-light: #c5e15a;
+  --primary-lighter: #d2ea6a;
   
-  /* Secondary Colors - Orange */
-  --secondary: #ff7733;
-  --secondary-dark: #ff6600;
-  --secondary-darker: #e65c00;
-  --secondary-light: #ff8844;
-  --secondary-lighter: #ff9955;
+  /* Secondary Colors - Blue */
+  --secondary: #0a83b8;
+  --secondary-dark: #0872a6;
+  --secondary-darker: #07618a;
+  --secondary-light: #0c94ca;
+  --secondary-lighter: #0ea5dc;
+  
+  /* Tertiary Colors - Green */
+  --tertiary: #0fac54;
+  --tertiary-dark: #0d9348;
+  --tertiary-darker: #0b7a3c;
+  --tertiary-light: #11c560;
+  --tertiary-lighter: #13de6c;
   
   /* Accent Colors */
   --accent: #f59e0b;
@@ -269,6 +286,13 @@
   --color-secondary-darker: var(--secondary-darker);
   --color-secondary-light: var(--secondary-light);
   --color-secondary-lighter: var(--secondary-lighter);
+  
+  /* Tertiary Colors */
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-dark: var(--tertiary-dark);
+  --color-tertiary-darker: var(--tertiary-darker);
+  --color-tertiary-light: var(--tertiary-light);
+  --color-tertiary-lighter: var(--tertiary-lighter);
   
   /* Accent Colors */
   --color-accent: var(--accent);
@@ -355,6 +379,12 @@
 .bg-secondary-light { background-color: var(--secondary-light); }
 .bg-secondary-lighter { background-color: var(--secondary-lighter); }
 
+.bg-tertiary { background-color: var(--tertiary); }
+.bg-tertiary-dark { background-color: var(--tertiary-dark); }
+.bg-tertiary-darker { background-color: var(--tertiary-darker); }
+.bg-tertiary-light { background-color: var(--tertiary-light); }
+.bg-tertiary-lighter { background-color: var(--tertiary-lighter); }
+
 .bg-accent { background-color: var(--accent); }
 .bg-accent-dark { background-color: var(--accent-dark); }
 .bg-accent-darker { background-color: var(--accent-darker); }
@@ -419,6 +449,12 @@
 .text-secondary-light { color: var(--secondary-light); }
 .text-secondary-lighter { color: var(--secondary-lighter); }
 
+.text-tertiary { color: var(--tertiary); }
+.text-tertiary-dark { color: var(--tertiary-dark); }
+.text-tertiary-darker { color: var(--tertiary-darker); }
+.text-tertiary-light { color: var(--tertiary-light); }
+.text-tertiary-lighter { color: var(--tertiary-lighter); }
+
 .text-accent { color: var(--accent); }
 .text-accent-dark { color: var(--accent-dark); }
 .text-accent-darker { color: var(--accent-darker); }
@@ -474,6 +510,10 @@
 .border-secondary-dark { border-color: var(--secondary-dark); }
 .border-secondary-light { border-color: var(--secondary-light); }
 
+.border-tertiary { border-color: var(--tertiary); }
+.border-tertiary-dark { border-color: var(--tertiary-dark); }
+.border-tertiary-light { border-color: var(--tertiary-light); }
+
 .border-accent { border-color: var(--accent); }
 .border-accent-dark { border-color: var(--accent-dark); }
 .border-accent-light { border-color: var(--accent-light); }
@@ -498,6 +538,10 @@
 .hover\:bg-secondary-dark:hover { background-color: var(--secondary-dark); }
 .hover\:bg-secondary-light:hover { background-color: var(--secondary-light); }
 
+.hover\:bg-tertiary:hover { background-color: var(--tertiary); }
+.hover\:bg-tertiary-dark:hover { background-color: var(--tertiary-dark); }
+.hover\:bg-tertiary-light:hover { background-color: var(--tertiary-light); }
+
 .hover\:bg-accent:hover { background-color: var(--accent); }
 .hover\:bg-accent-dark:hover { background-color: var(--accent-dark); }
 .hover\:bg-accent-light:hover { background-color: var(--accent-light); }
@@ -510,12 +554,17 @@
 .hover\:text-secondary-dark:hover { color: var(--secondary-dark); }
 .hover\:text-secondary-light:hover { color: var(--secondary-light); }
 
+.hover\:text-tertiary:hover { color: var(--tertiary); }
+.hover\:text-tertiary-dark:hover { color: var(--tertiary-dark); }
+.hover\:text-tertiary-light:hover { color: var(--tertiary-light); }
+
 .hover\:text-accent:hover { color: var(--accent); }
 .hover\:text-accent-dark:hover { color: var(--accent-dark); }
 .hover\:text-accent-light:hover { color: var(--accent-light); }
 
 .hover\:border-primary:hover { border-color: var(--primary); }
 .hover\:border-secondary:hover { border-color: var(--secondary); }
+.hover\:border-tertiary:hover { border-color: var(--tertiary); }
 .hover\:border-accent:hover { border-color: var(--accent); }
 
 /* ============================================

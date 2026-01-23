@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mekonnen Amdisa - Import & Export Company",
+  title: "Fethi Ahmed General Import & Export - Connecting Ethiopia's Finest Coffee with the World",
   description:
-    "Mekonnen Amdisa is an Import & Export company based in Ethiopia. We have exported 550 shipments to 100 buyers worldwide. Our primary markets include India, Pakistan, Turkey, Europe, South America, and the Middle East.",
+    "Fethi Ahmed General Import & Export is a dynamic Ethiopian trading company specializing in the export of premium specialty coffee and the import of industrial and medical equipment. Founded in 2006, we serve as a reliable bridge between Ethiopia and international markets.",
 };
 
 export default async function RootLayout({

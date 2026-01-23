@@ -71,7 +71,7 @@ const Header = ({ setup, services }: HeaderProps) => {
                       ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${setup.logo_large}`
                       : "/assets/images/IMG-20260117-WA0012.jpg"
                   }
-                  alt="Debab Trading"
+                  alt="Fethi Ahmed General Import & Export"
                   width={60}
                   height={60}
                   className="h-[60px] lg:h-[76px] w-auto object-contain"
@@ -158,10 +158,9 @@ const Header = ({ setup, services }: HeaderProps) => {
                   >
                     {/* Animated background effect */}
                     <motion.div
-                      className="absolute inset-0 bg-primary rounded-lg"
+                      className="absolute inset-0 bg-gradient-to-r from-primary to-tertiary rounded-lg"
                       initial={false}
                       whileHover={{
-                        backgroundColor: "rgb(var(--primary))",
                         scale: 1.02,
                       }}
                       transition={{ duration: 0.3 }}

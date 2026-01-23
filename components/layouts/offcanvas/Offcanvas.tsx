@@ -91,7 +91,7 @@ const Offcanvas = ({ isOpen, onClose, services, setup }: OffcanvasProps) => {
                           ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${setup.logo_large}`
                           : "/assets/images/IMG-20260117-WA0012.jpg"
                       }
-                      alt="Debab Trading"
+                      alt="Fethi Ahmed General Import & Export"
                       width={50}
                       height={50}
                       className="rounded-full object-cover ring-2 ring-accent/30 group-hover:ring-accent/50 transition-all duration-300 relative z-10"

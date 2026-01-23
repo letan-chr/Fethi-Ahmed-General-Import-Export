@@ -17,7 +17,7 @@ const AboutCta = () => {
 
       <div className="mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-primary via-primary-dark to-primary rounded-3xl p-8 md:p-16 text-on-primary relative overflow-hidden shadow-2xl">
+          <div className="bg-gradient-to-br from-secondary via-secondary-dark to-secondary rounded-3xl p-8 md:p-16 text-white relative overflow-hidden shadow-2xl">
             {/* Decorative Elements */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-on-primary/10 rounded-full -mr-32 -mt-32"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-on-primary/10 rounded-full -ml-24 -mb-24"></div>
@@ -40,13 +40,13 @@ const AboutCta = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Link
                   href="/conntacts"
-                  className="bg-background text-primary hover:bg-background-secondary px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg text-center min-w-[200px]"
+                  className="bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg text-center min-w-[200px]"
                 >
                   Get In Touch
                 </Link>
                 <Link
                   href="/products"
-                  className="bg-on-primary/10 hover:bg-on-primary/20 backdrop-blur-sm text-on-primary border-2 border-on-primary px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 text-center min-w-[200px]"
+                  className="bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white border-2 border-white/30 px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 text-center min-w-[200px]"
                 >
                   View Products
                 </Link>

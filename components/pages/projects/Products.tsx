@@ -117,8 +117,8 @@ const Products = () => {
               {/* Search Section */}
               <div className="bg-gradient-to-br from-background to-background-secondary rounded-2xl shadow-lg p-6 border border-border/50 backdrop-blur-sm">
                 <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Search className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+                    <Search className="w-5 h-5 text-secondary" />
                   </div>
                   <span>Search Products</span>
                 </h3>
@@ -135,7 +135,7 @@ const Products = () => {
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-on-primary font-semibold py-3 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                    className="w-full bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white font-semibold py-3 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                   >
                     Search
                   </button>

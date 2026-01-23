@@ -155,9 +155,9 @@ const Contacts = () => {
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-background-secondary/30 relative overflow-hidden">
       {/* Enhanced Background Decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-primary/10 via-accent/5 to-transparent rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-bl from-accent/10 via-primary/5 to-transparent rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-secondary/10 via-secondary/5 to-transparent rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-bl from-secondary/10 via-secondary/5 to-transparent rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-secondary/5 via-secondary/5 to-secondary/5 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
       </div>
 
       <div className="relative z-10 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
@@ -169,7 +169,7 @@ const Contacts = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 bg-gradient-to-r from-secondary via-secondary-light to-secondary bg-clip-text text-transparent">
               Get In Touch
             </h1>
             <p className="text-lg md:text-xl text-foreground-secondary max-w-2xl mx-auto">
@@ -230,9 +230,9 @@ const Contacts = () => {
                       Fill out the form below and we'll get back to you
                     </p>
                   </div>
-                  <div className="mt-4 sm:mt-0 flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full">
+                  <div className="mt-4 sm:mt-0 flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium text-primary">
+                    <span className="text-sm font-medium text-secondary">
                       Response within 24h
                     </span>
                   </div>
