@@ -166,11 +166,8 @@ const Blog = () => {
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
                           <div className="max-w-4xl">
-                            {/* Category Badge */}
+                            {/* Date */}
                             <div className="inline-flex items-center gap-3 mb-4">
-                              <span className="bg-primary text-on-primary px-4 py-2 rounded-full text-sm font-bold shadow-lg backdrop-blur-sm">
-                                {post.category?.title}
-                              </span>
                               <span className="text-white/80 text-sm">
                                 {new Date(post.created_at).toLocaleDateString("en-US", {
                                   year: "numeric",
@@ -342,11 +339,8 @@ const Blog = () => {
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10">
                           <div className="max-w-3xl">
-                            {/* Category Badge */}
+                            {/* Date */}
                             <div className="inline-flex items-center gap-2 mb-4">
-                              <span className="bg-primary text-on-primary px-4 py-2 rounded-full text-sm font-bold shadow-lg backdrop-blur-sm">
-                                {post.category?.title}
-                              </span>
                               <span className="text-white/80 text-sm">
                                 {new Date(post.created_at).toLocaleDateString("en-US", {
                                   year: "numeric",
@@ -357,7 +351,7 @@ const Blog = () => {
                             </div>
                             
                             {/* Title */}
-                            <h2 className="text-2xl md:text-4xl font-bold text-white mb-3 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                            <h2 className="text-2xl md:text-4xl font-bold text-white mb-3 leading-tight group-hover:text-secondary transition-colors duration-300 line-clamp-2">
                               {post.title}
                             </h2>
                             
@@ -497,7 +491,7 @@ const Blog = () => {
                                 }
                               )}
                             </p>
-                            <h4 className="text-sm font-semibold text-foreground line-clamp-2 group-hover:text-primary transition-colors">
+                            <h4 className="text-sm font-semibold text-foreground line-clamp-2 group-hover:text-secondary transition-colors">
                               {post.title}
                             </h4>
                           </div>
@@ -518,7 +512,7 @@ const Blog = () => {
                       className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 group ${
                         selectedCategory === "All"
                           ? "bg-primary text-on-primary shadow-md shadow-primary/20"
-                          : "bg-background-secondary text-foreground hover:bg-primary/5 hover:text-primary border border-border/50"
+                          : "bg-background-secondary text-foreground hover:bg-primary/5 hover:text-secondary border border-border/50"
                       }`}
                     >
                       <div className="flex items-center gap-3">
@@ -550,7 +544,7 @@ const Blog = () => {
                           className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 group ${
                             isSelected
                               ? "bg-primary text-on-primary shadow-md shadow-primary/20"
-                              : "bg-background-secondary text-foreground hover:bg-primary/5 hover:text-primary border border-border/50"
+                              : "bg-background-secondary text-foreground hover:bg-primary/5 hover:text-secondary border border-border/50"
                           }`}
                         >
                           <div className="flex items-center gap-3 flex-1 min-w-0">
