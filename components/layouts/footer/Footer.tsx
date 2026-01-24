@@ -344,7 +344,7 @@ const Footer = ({ setup, products }: FooterProps) => {
             <p className="text-xs sm:text-sm text-white/80 text-center md:text-left break-words overflow-wrap-anywhere">
               &copy; {new Date().getFullYear()}{" "}
               <span className="text-white font-semibold">
-                Mekonnen Amdisa Import & Export
+                Fethi Ahmed General Import & Export
               </span>
               {" "}. All rights reserved.
             </p>

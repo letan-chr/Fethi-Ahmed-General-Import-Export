@@ -33,7 +33,7 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
   const currentContent = heroSlides[currentSlide];
 
   return (
-    <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] overflow-hidden bg-black w-full">
+    <section className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] max-h-[100vh] pt-14 sm:pt-16 md:pt-[4.5rem] lg:pt-20 overflow-hidden bg-black w-full">
       {/* Full Background Image */}
       <AnimatePresence initial={false} mode="sync">
         {heroSlides.map(
@@ -114,10 +114,10 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
       </div>
 
       {/* Content Section - Left Aligned (60% area) */}
-      <div className="relative z-20 h-full flex items-center px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16 overflow-hidden">
+      <div className="relative z-20 min-h-[calc(50vh-3.5rem)] sm:min-h-[calc(60vh-4rem)] md:min-h-[calc(70vh-4.5rem)] lg:min-h-[calc(70vh-5rem)] max-h-[calc(100vh-3.5rem)] sm:max-h-[calc(100vh-4rem)] md:max-h-[calc(100vh-4.5rem)] lg:max-h-[calc(100vh-5rem)] flex items-center px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16 py-4 sm:py-6 md:py-8 overflow-hidden">
         <div className="w-full max-w-full sm:max-w-[95%] md:max-w-[85%] lg:max-w-[70%] xl:max-w-[60%] text-left overflow-hidden">
           {/* Main Content */}
-          <div className="space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-6 overflow-hidden">
+          <div className="space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-6 overflow-hidden max-h-full">
             {/* Title */}
             <AnimatePresence mode="wait">
               <motion.div
@@ -128,7 +128,7 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
                 transition={{ duration: 0.5 }}
                 className="overflow-hidden"
               >
-                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-tight text-white mb-1 sm:mb-2 md:mb-3 lg:mb-4 break-words hyphens-auto overflow-wrap-anywhere">
+                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-tight text-white mb-1 sm:mb-2 md:mb-3 lg:mb-4 break-words hyphens-auto overflow-wrap-anywhere line-clamp-3 sm:line-clamp-4">
                   <span className="block">{currentContent?.title}</span>
                 </h1>
               </motion.div>
@@ -142,9 +142,9 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 30 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="hidden md:block"
+                className="hidden md:block overflow-hidden"
               >
-                <p className="text-base sm:text-lg lg:text-xl text-white/95 leading-relaxed">
+                <p className="text-base sm:text-lg lg:text-xl text-white/95 leading-relaxed line-clamp-2 lg:line-clamp-3">
                   {currentContent?.description}
                 </p>
               </motion.div>
@@ -210,7 +210,7 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
       {/* Slide Indicators - Bottom Center */}
       {heroSlides.length > 1 && (
         <motion.div
-          className="absolute bottom-2 sm:bottom-4 md:bottom-6 lg:bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 sm:gap-2 md:gap-3 bg-black/20 backdrop-blur-md px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-full border border-white/20 max-w-[90vw] overflow-hidden"
+          className="absolute bottom-2 sm:bottom-4 md:bottom-6 lg:bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 sm:gap-2 md:gap-3 bg-black/20 backdrop-blur-md px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-full border border-white/20 max-w-[90vw] overflow-hidden mb-2 sm:mb-4"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
