@@ -48,23 +48,23 @@ const MobileNav = ({ navItems, isOpen, onClose }: MobileNavProps) => {
 
           {/* Mobile Navigation Sidebar */}
           <motion.div
-            className="fixed top-0 right-0 h-full w-80 sm:w-96 bg-background dark:bg-background-secondary shadow-2xl z-50 overflow-y-auto"
+            className="fixed top-0 right-0 h-full w-[85vw] max-w-[320px] sm:w-80 md:w-96 bg-background dark:bg-background-secondary shadow-2xl z-50 overflow-y-auto overflow-x-hidden"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
           >
-            <div className="flex flex-col h-full">
+            <div className="flex flex-col h-full overflow-hidden">
               {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-border dark:border-border-dark">
-                <h2 className="text-xl font-bold text-foreground">Menu</h2>
+              <div className="flex items-center justify-between p-4 sm:p-5 md:p-6 border-b border-border dark:border-border-dark flex-shrink-0">
+                <h2 className="text-lg sm:text-xl font-bold text-foreground truncate">Menu</h2>
                 <button
                   onClick={onClose}
-                  className="p-2 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/20 transition-all duration-300"
+                  className="p-1.5 sm:p-2 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/20 transition-all duration-300 flex-shrink-0"
                   aria-label="Close menu"
                 >
                   <svg
-                    className="w-6 h-6"
+                    className="w-5 h-5 sm:w-6 sm:h-6"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -80,7 +80,7 @@ const MobileNav = ({ navItems, isOpen, onClose }: MobileNavProps) => {
               </div>
 
               {/* Navigation Items */}
-              <div className="flex-1 p-6 overflow-y-auto">
+              <div className="flex-1 p-4 sm:p-5 md:p-6 overflow-y-auto overflow-x-hidden">
                 <nav className="space-y-2">
                   {navItems.map((item, index) => {
                     const isActive = pathname === item.href;
@@ -94,7 +94,7 @@ const MobileNav = ({ navItems, isOpen, onClose }: MobileNavProps) => {
                         <Link
                           href={item.href}
                           onClick={onClose}
-                          className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
+                          className={`block px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg font-medium transition-all duration-300 text-sm sm:text-base truncate ${
                             isActive
                               ? "bg-primary/10 text-primary border border-accent/50 dark:bg-primary/20"
                               : "text-foreground hover:bg-primary/5 hover:text-primary dark:hover:bg-primary/10"
@@ -109,11 +109,11 @@ const MobileNav = ({ navItems, isOpen, onClose }: MobileNavProps) => {
               </div>
 
               {/* Footer CTA */}
-              <div className="p-6 border-t border-border dark:border-border-dark bg-background-secondary dark:bg-background-tertiary">
+              <div className="p-4 sm:p-5 md:p-6 border-t border-border dark:border-border-dark bg-background-secondary dark:bg-background-tertiary flex-shrink-0">
                 <Link
                   href="/conntacts"
                   onClick={onClose}
-                  className="block w-full bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white px-6 py-3.5 rounded-lg font-semibold transition-all duration-300 text-center transform hover:scale-[1.02] hover:shadow-lg"
+                  className="block w-full bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white px-4 sm:px-6 py-2.5 sm:py-3 md:py-3.5 rounded-lg font-semibold transition-all duration-300 text-center text-sm sm:text-base transform hover:scale-[1.02] hover:shadow-lg overflow-hidden"
                 >
                   Get Quote
                 </Link>

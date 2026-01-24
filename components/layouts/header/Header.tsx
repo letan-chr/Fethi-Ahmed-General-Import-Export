@@ -40,7 +40,7 @@ const Header = ({ setup, services }: HeaderProps) => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out w-full overflow-hidden ${
           isScrolled
             ? "bg-black/40 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.3)] border-b border-white/10"
             : "bg-black/5 backdrop-blur-md"
@@ -52,17 +52,17 @@ const Header = ({ setup, services }: HeaderProps) => {
         {/* Subtle gradient accent line */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary/30 to-transparent" />
 
-        <div className="relative mx-auto max-w-9xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="relative mx-auto max-w-9xl px-2 sm:px-4 md:px-6 lg:px-8 w-full overflow-hidden">
+          <div className="flex items-center justify-between h-14 sm:h-16 md:h-18 lg:h-20 min-h-[56px]">
             {/* Logo Section */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="relative z-10"
+              className="relative z-10 flex-shrink-0 max-w-[40%] sm:max-w-[45%] md:max-w-none"
             >
-              <Link href="/" className="flex items-center">
-                <div className="relative p-1 h-[62px] lg:h-[78px] flex items-center justify-center">
+              <Link href="/" className="flex items-center w-full">
+                <div className="relative p-0.5 sm:p-1 h-10 w-auto sm:h-12 md:h-14 lg:h-16 flex items-center justify-center overflow-hidden">
                   <Image
                     src={
                       setup?.logo_small
@@ -74,7 +74,8 @@ const Header = ({ setup, services }: HeaderProps) => {
                     alt="Fethi Ahmed General Import & Export"
                     width={160}
                     height={160}
-                    className=" transition-all duration-300 relative z-10"
+                    className="h-full w-auto object-contain transition-all duration-300 relative z-10"
+                    priority
                   />
                 </div>
               </Link>
@@ -202,12 +203,13 @@ const Header = ({ setup, services }: HeaderProps) => {
             </nav>
 
             {/* Mobile Actions */}
-            <div className="flex items-center gap-3 lg:hidden">
+            <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 lg:hidden flex-shrink-0">
               {/* Mobile CTA Button */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: 0.1 }}
+                className="flex-shrink-0"
               >
                 <Link
                   href={
@@ -215,11 +217,11 @@ const Header = ({ setup, services }: HeaderProps) => {
                       ? `tel:${setup.phone_numbers[0].value}`
                       : "/conntacts"
                   }
-                  className="relative px-4 py-2.5 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white backdrop-blur-sm transition-all duration-300"
+                  className="relative px-2.5 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-2.5 inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 rounded-lg bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white backdrop-blur-sm transition-all duration-300 overflow-hidden"
                 >
                   {/* Pulsing dot */}
                   <motion.div
-                    className="w-2 h-2 rounded-full bg-white"
+                    className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-white flex-shrink-0"
                     animate={{
                       scale: [1, 1.3, 1],
                       opacity: [0.7, 1, 0.7],
@@ -230,7 +232,7 @@ const Header = ({ setup, services }: HeaderProps) => {
                       ease: "easeInOut",
                     }}
                   />
-                  <span className="text-sm font-medium text-white">Call</span>
+                  <span className="text-xs sm:text-sm font-medium text-white whitespace-nowrap">Call</span>
                 </Link>
               </motion.div>
 
@@ -239,13 +241,14 @@ const Header = ({ setup, services }: HeaderProps) => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
+                className="flex-shrink-0"
               >
                 <ThemeToggle />
               </motion.div>
 
               {/* Mobile Menu Button */}
               <motion.button
-                className={`relative p-2.5 rounded-lg transition-all duration-300 ${
+                className={`relative p-1.5 sm:p-2 md:p-2.5 rounded-lg transition-all duration-300 flex-shrink-0 ${
                   isScrolled
                     ? "bg-white/15 backdrop-blur-md"
                     : "bg-white/10 backdrop-blur-sm"
@@ -260,20 +263,20 @@ const Header = ({ setup, services }: HeaderProps) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className="relative w-6 h-5">
+                <div className="relative w-5 h-4 sm:w-6 sm:h-5">
                   <span
-                    className={`absolute left-0 w-6 h-0.5 bg-white transition-all duration-300 ${
-                      isMobileNavOpen ? "top-2 rotate-45" : "top-0"
+                    className={`absolute left-0 w-5 sm:w-6 h-0.5 bg-white transition-all duration-300 ${
+                      isMobileNavOpen ? "top-1.5 sm:top-2 rotate-45" : "top-0"
                     }`}
                   />
                   <span
-                    className={`absolute left-0 w-6 h-0.5 bg-white transition-all duration-300 ${
-                      isMobileNavOpen ? "opacity-0" : "top-2 opacity-100"
+                    className={`absolute left-0 w-5 sm:w-6 h-0.5 bg-white transition-all duration-300 ${
+                      isMobileNavOpen ? "opacity-0" : "top-1.5 sm:top-2 opacity-100"
                     }`}
                   />
                   <span
-                    className={`absolute left-0 w-6 h-0.5 bg-white transition-all duration-300 ${
-                      isMobileNavOpen ? "top-2 -rotate-45" : "top-4"
+                    className={`absolute left-0 w-5 sm:w-6 h-0.5 bg-white transition-all duration-300 ${
+                      isMobileNavOpen ? "top-1.5 sm:top-2 -rotate-45" : "top-3 sm:top-4"
                     }`}
                   />
                 </div>

@@ -51,8 +51,8 @@ const Footer = ({ setup, products }: FooterProps) => {
   ) as [keyof SocialMedia, string][];
 
   return (
-    <footer className="bg-black text-white">
-      <div className="mx-auto max-w-9xl px-4 sm:px-6 lg:px-8">
+    <footer className="bg-black text-white w-full overflow-hidden">
+      <div className="mx-auto max-w-9xl px-3 sm:px-4 md:px-6 lg:px-8 w-full overflow-hidden">
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16">
@@ -340,21 +340,21 @@ const Footer = ({ setup, products }: FooterProps) => {
           transition={{ duration: 0.6, delay: 0.4 }}
           data-aos="fade-up"
         >
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-white/80 text-center md:text-left">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 overflow-hidden">
+            <p className="text-xs sm:text-sm text-white/80 text-center md:text-left break-words overflow-wrap-anywhere">
               &copy; {new Date().getFullYear()}{" "}
               <span className="text-white font-semibold">
                 Mekonnen Amdisa Import & Export
               </span>
               {" "}. All rights reserved.
             </p>
-            <p className="text-sm text-white/80">
+            <p className="text-xs sm:text-sm text-white/80 text-center md:text-right break-words">
               Designed by{" "}
               <Link
                 href="https://keradiontechnology.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/90 hover:text-white transition-colors font-semibold"
+                className="text-white/90 hover:text-white transition-colors font-semibold break-all"
               >
                 Keradion Technology
               </Link>

@@ -1,70 +1,86 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+type ProjectItem = {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  features: string[];
+};
+
+const product1: ProjectItem = {
+  id: 'specialty-coffee',
+  title: 'Ethiopian Specialty Coffee',
+  description: 'We export carefully selected, high-grade coffee beans sourced from Ethiopia\'s most celebrated coffee-growing regions',
+  image: '/assets/images/photo_2026-01-20_10-55-53.jpg',
+  features: [
+    'Fresh, authentic beans',
+    'Ethical sourcing',
+    'Unique flavor profiles exclusive to Ethiopia',
+    'Partnerships with skilled farmers',
+  ],
+};
+
+const product2: ProjectItem = {
+  id: 'millstone-grind-mills',
+  title: 'Millstone & Grind Mills',
+  description: 'Strong, durable grinding solutions for farming and industry',
+  image: '/assets/images/photo_2026-01-20_10-55-53 (3).jpg',
+  features: [
+    'Durable construction',
+    'Farming applications',
+    'Industrial use',
+    'Reliable performance',
+  ],
+};
+
+const product3: ProjectItem = {
+  id: 'generators',
+  title: 'Generators',
+  description: 'Reliable power generation units for continuous operation',
+  image: '/assets/images/photo_2024-08-13-17.19.52-1280x854.jpeg',
+  features: [
+    'Continuous operation',
+    'Reliable power generation',
+    'Industrial grade',
+    'Quality assurance',
+  ],
+};
+
+const product4: ProjectItem = {
+  id: 'medical-equipment',
+  title: 'Medical Equipment',
+  description: 'Modern diagnostic devices, tools & consumables for healthcare providers',
+  image: '/assets/images/photo_2026-01-20_10-55-53 (2).jpg',
+  features: [
+    'Modern diagnostic devices',
+    'Medical tools',
+    'Consumables',
+    'Healthcare solutions',
+  ],
+};
+
+const product5: ProjectItem = {
+  id: 'water-pumps',
+  title: 'Water Pumps',
+  description: 'Hand pumps and electrical water pumps for rural access, farming, and irrigation',
+  image: '/assets/images/photo_2026-01-20_10-55-54.jpg',
+  features: [
+    'Hand pumps for rural access',
+    'Electrical water pumps',
+    'Irrigation systems',
+    'Farming applications',
+  ],
+};
+
+const productsData: ProjectItem[] = [product1, product2, product3, product4, product5];
+
 const Projects = () => {
-  const products = [
-    {
-      id: 'specialty-coffee',
-      title: 'Ethiopian Specialty Coffee',
-      description: 'We export carefully selected, high-grade coffee beans sourced from Ethiopia's most celebrated coffee-growing regions',
-      image: '/assets/images/photo_2026-01-20_10-55-53.jpg',
-      features: [
-        'Fresh, authentic beans',
-        'Ethical sourcing',
-        'Unique flavor profiles exclusive to Ethiopia',
-        'Partnerships with skilled farmers',
-      ],
-    },
-    {
-      id: 'millstone-grind-mills',
-      title: 'Millstone & Grind Mills',
-      description: 'Strong, durable grinding solutions for farming and industry',
-      image: '/assets/images/photo_2026-01-20_10-55-53 (3).jpg',
-      features: [
-        'Durable construction',
-        'Farming applications',
-        'Industrial use',
-        'Reliable performance',
-      ],
-    },
-    {
-      id: 'generators',
-      title: 'Generators',
-      description: 'Reliable power generation units for continuous operation',
-      image: '/assets/images/photo_2024-08-13-17.19.52-1280x854.jpeg',
-      features: [
-        'Continuous operation',
-        'Reliable power generation',
-        'Industrial grade',
-        'Quality assurance',
-      ],
-    },
-    {
-      id: 'medical-equipment',
-      title: 'Medical Equipment',
-      description: 'Modern diagnostic devices, tools & consumables for healthcare providers',
-      image: '/assets/images/photo_2026-01-20_10-55-53 (2).jpg',
-      features: [
-        'Modern diagnostic devices',
-        'Medical tools',
-        'Consumables',
-        'Healthcare solutions',
-      ],
-    },
-    {
-      id: 'water-pumps',
-      title: 'Water Pumps',
-      description: 'Hand pumps and electrical water pumps for rural access, farming, and irrigation',
-      image: '/assets/images/photo_2026-01-20_10-55-54.jpg',
-      features: [
-        'Hand pumps for rural access',
-        'Electrical water pumps',
-        'Irrigation systems',
-        'Farming applications',
-      ],
-    },
-  ];
+  const products = productsData;
 
   return (
     <div className="py-20 bg-gray-50">

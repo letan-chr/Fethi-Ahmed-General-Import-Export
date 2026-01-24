@@ -33,7 +33,7 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
   const currentContent = heroSlides[currentSlide];
 
   return (
-    <section className="relative h-[70vh] overflow-hidden bg-black">
+    <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] overflow-hidden bg-black w-full">
       {/* Full Background Image */}
       <AnimatePresence initial={false} mode="sync">
         {heroSlides.map(
@@ -114,10 +114,10 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
       </div>
 
       {/* Content Section - Left Aligned (60% area) */}
-      <div className="relative z-20 h-full flex items-center px-6 sm:px-8 lg:px-12 xl:px-16">
-        <div className="w-full min-w-[60%] max-w-[60%] text-left">
+      <div className="relative z-20 h-full flex items-center px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16 overflow-hidden">
+        <div className="w-full max-w-full sm:max-w-[95%] md:max-w-[85%] lg:max-w-[70%] xl:max-w-[60%] text-left overflow-hidden">
           {/* Main Content */}
-          <div className="space-y-6">
+          <div className="space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-6 overflow-hidden">
             {/* Title */}
             <AnimatePresence mode="wait">
               <motion.div
@@ -126,14 +126,15 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 30 }}
                 transition={{ duration: 0.5 }}
+                className="overflow-hidden"
               >
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white mb-4">
+                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-tight text-white mb-1 sm:mb-2 md:mb-3 lg:mb-4 break-words hyphens-auto overflow-wrap-anywhere">
                   <span className="block">{currentContent?.title}</span>
                 </h1>
               </motion.div>
             </AnimatePresence>
 
-            {/* Description */}
+            {/* Description - Hidden on small screens */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={`desc-${currentSlide}`}
@@ -141,6 +142,7 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 30 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
+                className="hidden md:block"
               >
                 <p className="text-base sm:text-lg lg:text-xl text-white/95 leading-relaxed">
                   {currentContent?.description}
@@ -150,19 +152,19 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-wrap gap-4 pt-6"
+              className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-2 md:gap-3 lg:gap-4 pt-1 sm:pt-2 md:pt-4 lg:pt-6 overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                 <Link
                   href="/products"
-                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 shadow-lg"
+                  className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 md:gap-3 px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white text-xs sm:text-sm md:text-base lg:font-semibold rounded-lg overflow-hidden transition-all duration-300 shadow-lg w-full sm:w-auto"
                 >
                   <span className="relative z-10">Explore Products</span>
                   <motion.svg
-                    className="w-5 h-5 relative z-10"
+                    className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 relative z-10 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -179,14 +181,14 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
                   </motion.svg>
                 </Link>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                 <Link
                   href="/conntacts"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white font-semibold rounded-lg transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center justify-center gap-1.5 sm:gap-2 md:gap-3 px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 bg-gradient-to-r from-primary to-tertiary hover:from-primary-light hover:to-tertiary-light text-white text-xs sm:text-sm md:text-base lg:font-semibold rounded-lg transition-all duration-300 shadow-lg w-full sm:w-auto"
                 >
                   <span>Contact Us</span>
                   <svg
-                    className="w-5 h-5"
+                    className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -208,7 +210,7 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
       {/* Slide Indicators - Bottom Center */}
       {heroSlides.length > 1 && (
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 bg-black/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/20"
+          className="absolute bottom-2 sm:bottom-4 md:bottom-6 lg:bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 sm:gap-2 md:gap-3 bg-black/20 backdrop-blur-md px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-full border border-white/20 max-w-[90vw] overflow-hidden"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
@@ -217,16 +219,16 @@ const Hero = ({ heroSlides, stats }: HeroProps) => {
             <motion.button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`relative rounded-full transition-all duration-300 ${
+              className={`relative rounded-full transition-all duration-300 flex-shrink-0 ${
                 index === currentSlide
                   ? "bg-accent shadow-lg shadow-accent/50"
                   : "bg-white/40 hover:bg-white/60"
               }`}
               aria-label={`Go to slide ${index + 1}`}
-              whileHover={{ scale: 1.2 }}
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               animate={{
-                width: index === currentSlide ? 32 : 8,
+                width: index === currentSlide ? 24 : 8,
                 height: 8,
               }}
               transition={{ duration: 0.3 }}

@@ -67,7 +67,7 @@ const Offcanvas = ({ isOpen, onClose, services, setup }: OffcanvasProps) => {
 
           {/* Offcanvas Sidebar */}
           <motion.div
-            className="fixed top-0 right-0 h-full w-80 sm:w-96 bg-background dark:bg-background-secondary shadow-2xl z-50 overflow-y-auto"
+            className="fixed top-0 right-0 h-full w-[85vw] max-w-[320px] sm:w-80 md:w-96 bg-background dark:bg-background-secondary shadow-2xl z-50 overflow-y-auto overflow-x-hidden"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}

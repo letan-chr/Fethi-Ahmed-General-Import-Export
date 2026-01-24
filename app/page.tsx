@@ -104,7 +104,7 @@ export default function Home() {
       )}
       {/* Partners - Conditional Rendering */}
       {partners && partners.length > 0 && (
-        <Partners partners={partners} stats={stats} />
+        <Partners partners={partners} />
       )}
     </>
   );
