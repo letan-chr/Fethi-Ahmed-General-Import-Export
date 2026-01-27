@@ -67,8 +67,6 @@ const Header = ({ setup, services }: HeaderProps) => {
                     src={
                       setup?.logo_small
                         ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${setup.logo_small}`
-                        : setup?.logo_large
-                        ? `${process.env.NEXT_PUBLIC_IMAGE_URL}/${setup.logo_large}`
                         : "/assets/images/photo_2026-01-20_10-55-06.jpg"
                     }
                     alt="Fethi Ahmed General Import & Export"
